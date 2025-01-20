@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "887760858011",
+    "project_id": "emergencias-muni-cba-wt768q",
+    "storage_bucket": "emergencias-muni-cba-wt768q.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887760858011:android:fb07688aa94a3fe9e48f3e",
+        "android_client_info": {
+          "package_name": "com.mycompany.emergenciasmunicba"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx4uF46fPxjD6kF49_nR-Ob8AY39SDnDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
