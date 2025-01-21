@@ -83,30 +83,26 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
           child: Scaffold(
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-            floatingActionButton: Visibility(
-              visible: (solicitudesUsuariosRow?.rol == 'Administrador') ||
-                  (solicitudesUsuariosRow?.rol == 'Solicitante'),
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: FloatingActionButton(
-                  onPressed: () async {
-                    context.pushNamed(
-                      'CargarPersona',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: const TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.fade,
-                        ),
-                      },
-                    );
-                  },
-                  backgroundColor: FlutterFlowTheme.of(context).secondary,
-                  elevation: 8.0,
-                  child: Icon(
-                    Icons.add_rounded,
-                    color: FlutterFlowTheme.of(context).info,
-                    size: 36.0,
-                  ),
+            floatingActionButton: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: FloatingActionButton(
+                onPressed: () async {
+                  context.pushNamed(
+                    'CargarPersona',
+                    extra: <String, dynamic>{
+                      kTransitionInfoKey: const TransitionInfo(
+                        hasTransition: true,
+                        transitionType: PageTransitionType.fade,
+                      ),
+                    },
+                  );
+                },
+                backgroundColor: FlutterFlowTheme.of(context).secondary,
+                elevation: 8.0,
+                child: Icon(
+                  Icons.add_rounded,
+                  color: FlutterFlowTheme.of(context).info,
+                  size: 36.0,
                 ),
               ),
             ),
