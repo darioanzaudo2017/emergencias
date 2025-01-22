@@ -763,7 +763,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                               'auth_2_Login', context.mounted);
                                         },
                                         child: Text(
-                                          'Check Out',
+                                          'Salir',
                                           style: FlutterFlowTheme.of(context)
                                               .labelMedium
                                               .override(
