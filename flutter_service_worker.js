@@ -3,11 +3,12 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "352d48e0369fe55d4bb9bcd5bd222de6",
-"assets/AssetManifest.bin.json": "627356b37d02f08ed0bc61641f1e92ee",
-"assets/AssetManifest.json": "3b7a15b288d2cb6bb4dfbb4e4409dafe",
+const RESOURCES = {"assets/AssetManifest.bin": "03bfd9d05e2eab96772e406f79a0c70f",
+"assets/AssetManifest.bin.json": "9f735848ba93c9f7574a869c28e98d26",
+"assets/AssetManifest.json": "658aa6357aecb01fc2fc48f156f4a26f",
 "assets/assets/audios/favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "assets/assets/fonts/favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"assets/assets/fonts/MaterialIcons-Regular.otf": "9179ebcfd09f0e53fff969ed0dd201d6",
 "assets/assets/images/adaptive_foreground_icon.png": "6ca253f1f3f1d36cee0b5e3e05cf0496",
 "assets/assets/images/app_launcher_icon.png": "6ca253f1f3f1d36cee0b5e3e05cf0496",
 "assets/assets/images/Captura_de_pantalla_2024-11-28_120840.png": "47c6c9afd2a65b11edfb985a3e71c667",
@@ -56,7 +57,7 @@ const RESOURCES = {"assets/AssetManifest.bin": "352d48e0369fe55d4bb9bcd5bd222de6
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "index.html": "dcde873caa2d19943aa7d29377190b88",
 "/": "dcde873caa2d19943aa7d29377190b88",
-"main.dart.js": "1be9b9216dbf81be8d3d41acc02cb096",
+"main.dart.js": "3e37ac8a28c5ddeeceb238b8c7e2eec5",
 "version.json": "d731583de6cdc736163f106629db1f40"};
 // The application shell files that are downloaded before a service worker can
 // start.
