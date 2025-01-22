@@ -701,6 +701,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                       .override(
                                         fontFamily: 'Maven Pro',
                                         letterSpacing: 0.0,
+                                        fontWeight: FontWeight.bold,
                                       ),
                                 ),
                                 Text(
