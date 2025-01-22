@@ -305,6 +305,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Readex Pro',
+                                                          fontSize: 18.0,
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
