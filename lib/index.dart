@@ -58,3 +58,9 @@ export '/administrativo/cargar_editar_persona/cargar_editar_persona_widget.dart'
 export '/pages/ayuda/ayuda_widget.dart' show AyudaWidget;
 export '/administrativo/solicitudes_eliminar/solicitudes_eliminar_widget.dart'
     show SolicitudesEliminarWidget;
+export '/historial/historial_pedidos/historial_pedidos_widget.dart'
+    show HistorialPedidosWidget;
+export '/historial/historial_pedidos2/historial_pedidos2_widget.dart'
+    show HistorialPedidos2Widget;
+export '/historial/ver_pedido_historial/ver_pedido_historial_widget.dart'
+    show VerPedidoHistorialWidget;

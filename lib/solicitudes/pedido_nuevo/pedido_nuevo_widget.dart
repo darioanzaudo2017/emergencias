@@ -1,4 +1,5 @@
 import '/auth/supabase_auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -187,7 +188,8 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                       width: MediaQuery.sizeOf(context).width *
                                           0.9,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xCCFFFFFF),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
                                         boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 8.0,
@@ -634,7 +636,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              const Color(0xFF14181B),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -735,7 +737,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              const Color(0xFF14181B),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -836,7 +838,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              const Color(0xFF14181B),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -945,6 +947,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
+                                                    color: const Color(0xFF14181B),
                                                     letterSpacing: 0.0,
                                                   ),
                                           searchTextStyle:
@@ -954,16 +957,14 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                     fontFamily: 'Readex Pro',
                                                     letterSpacing: 0.0,
                                                   ),
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                letterSpacing: 0.0,
-                                              ),
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    color: const Color(0xFF14181B),
+                                                    letterSpacing: 0.0,
+                                                  ),
                                           hintText: 'Sellecione un Barrio',
                                           searchHintText: 'Buscar...',
                                           icon: Icon(
@@ -1022,7 +1023,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                     .override(
                                                       fontFamily:
                                                           'Plus Jakarta Sans',
-                                                      color: const Color(0xFF57636C),
+                                                      color: const Color(0xFF14181B),
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -1068,9 +1069,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
+                                                color: const Color(0xFF14181B),
                                                 fontSize: 14.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.normal,
@@ -1078,6 +1077,95 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                           validator: _model
                                               .textDireccionTextControllerValidator
                                               .asValidator(context),
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            5.0, 16.0, 5.0, 0.0),
+                                        child: FFButtonWidget(
+                                          onPressed: () async {
+                                            _model.toke =
+                                                await PedirtokencatastroCall
+                                                    .call();
+
+                                            _model.apiResultzg3 =
+                                                await DireccionCatastroCall
+                                                    .call(
+                                              token:
+                                                  PedirtokencatastroCall.token(
+                                                (_model.toke?.jsonBody ?? ''),
+                                              ),
+                                              calle:
+                                                  '${_model.textDireccionTextController.text} - ${_model.dropDownBarriosValue}',
+                                            );
+
+                                            if ((_model
+                                                    .apiResultzg3?.succeeded ??
+                                                true)) {
+                                              await showDialog(
+                                                context: context,
+                                                builder: (alertDialogContext) {
+                                                  return AlertDialog(
+                                                    title:
+                                                        const Text('salida de api'),
+                                                    content: Text(
+                                                        '${DireccionCatastroCall.direccioncompleta(
+                                                      (_model.apiResultzg3
+                                                              ?.jsonBody ??
+                                                          ''),
+                                                    )?.firstOrNull}${DireccionCatastroCall.reloid(
+                                                      (_model.apiResultzg3
+                                                              ?.jsonBody ??
+                                                          ''),
+                                                    )?.firstOrNull?.toString()}${DireccionCatastroCall.numeracion(
+                                                      (_model.apiResultzg3
+                                                              ?.jsonBody ??
+                                                          ''),
+                                                    )?.firstOrNull?.toString()}${DireccionCatastroCall.idunidad(
+                                                      (_model.apiResultzg3
+                                                              ?.jsonBody ??
+                                                          ''),
+                                                    )?.firstOrNull?.toString()}'),
+                                                    actions: [
+                                                      TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                alertDialogContext),
+                                                        child: const Text('Ok'),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                              );
+                                            }
+
+                                            safeSetState(() {});
+                                          },
+                                          text: 'Cargar Coordenadas',
+                                          options: FFButtonOptions(
+                                            height: 40.0,
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    16.0, 0.0, 16.0, 0.0),
+                                            iconPadding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 0.0),
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmall
+                                                    .override(
+                                                      fontFamily: 'Readex Pro',
+                                                      color: Colors.white,
+                                                      letterSpacing: 0.0,
+                                                    ),
+                                            elevation: 0.0,
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -1152,16 +1240,13 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryText,
+                                              color: const Color(0xFF14181B),
                                               letterSpacing: 0.0,
                                             ),
                                         hintText: 'Procedencia del Pedido',
-                                        icon: Icon(
+                                        icon: const Icon(
                                           Icons.keyboard_arrow_down_rounded,
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
+                                          color: Color(0xFF14181B),
                                           size: 24.0,
                                         ),
                                         fillColor: FlutterFlowTheme.of(context)
@@ -1202,7 +1287,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                     .override(
                                                       fontFamily:
                                                           'Plus Jakarta Sans',
-                                                      color: const Color(0xFF57636C),
+                                                      color: const Color(0xFF14181B),
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -1215,7 +1300,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                     .override(
                                                       fontFamily:
                                                           'Plus Jakarta Sans',
-                                                      color: const Color(0xFF57636C),
+                                                      color: const Color(0xFF14181B),
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -1288,32 +1373,31 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                   .dropDownSubSecreValueController ??=
                                               FormFieldController<String>(null),
                                           options: const [
-                                            'Subsecretaria Liliana Montero',
-                                            'Subsecretaria Oscar Arias',
-                                            'Intervención Social',
-                                            'Secretaría Raúl la Cava'
+                                            'Subsecretaría de Nuevas Economías',
+                                            'Subsecretaría de Emergencia e Intervención Territorial',
+                                            'Subsecretaría de Familias y Desarrollo Comunitario',
+                                            'Subsecretaría de Derechos Humanos, Mujeres, Géneros y Diversidades',
+                                            'Dirección General de Discapacidad',
+                                            'Otras'
                                           ],
                                           onChanged: (val) => safeSetState(() =>
                                               _model.dropDownSubSecreValue =
                                                   val),
                                           width: 200.0,
                                           height: 50.0,
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                letterSpacing: 0.0,
-                                              ),
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    color: const Color(0xFF14181B),
+                                                    letterSpacing: 0.0,
+                                                  ),
                                           hintText:
                                               'Subsecretaria que recibio la Demanda',
-                                          icon: Icon(
+                                          icon: const Icon(
                                             Icons.keyboard_arrow_down_rounded,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
+                                            color: Color(0xFF14181B),
                                             size: 24.0,
                                           ),
                                           fillColor:

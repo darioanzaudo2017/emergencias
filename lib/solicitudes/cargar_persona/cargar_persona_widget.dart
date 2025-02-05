@@ -284,7 +284,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                                         Completer<
                                                             ApiCallResponse>()
                                                           ..complete(
-                                                              BuscarPersonaCall
+                                                              BuscarpersonaCall
                                                                   .call(
                                                             buscar: _model
                                                                 .buscadorPersonasTextController
@@ -311,7 +311,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                                       ),
                                                     );
                                                   }
-                                                  final containerDataBuscarPersonaResponse =
+                                                  final containerDataBuscarpersonaResponse =
                                                       snapshot.data!;
 
                                                   return Container(
@@ -328,7 +328,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                                     child: Builder(
                                                       builder: (context) {
                                                         final listaPersonas =
-                                                            containerDataBuscarPersonaResponse
+                                                            containerDataBuscarpersonaResponse
                                                                 .jsonBody
                                                                 .toList();
 
