@@ -556,7 +556,7 @@ class _VerPedidoWidgetState extends State<VerPedidoWidget> {
                                                                 children: [
                                                                   Text(
                                                                     dateTimeFormat(
-                                                                        "yMMMd",
+                                                                        "d/M/y",
                                                                         widget
                                                                             .idPedido!
                                                                             .fecha!),

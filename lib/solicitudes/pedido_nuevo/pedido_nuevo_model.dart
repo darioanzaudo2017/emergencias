@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
@@ -69,6 +70,10 @@ class PedidoNuevoModel extends FlutterFlowModel<PedidoNuevoWidget> {
     return null;
   }
 
+  // Stores action output result for [Backend Call - API (pedirtokencatastro)] action in Button widget.
+  ApiCallResponse? toke;
+  // Stores action output result for [Backend Call - API (direccionCatastro)] action in Button widget.
+  ApiCallResponse? apiResultzg3;
   // State field(s) for SwitchDisca widget.
   bool? switchDiscaValue;
   // State field(s) for DropDownProce widget.

@@ -334,6 +334,34 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: '/solicitudesEliminar',
           requireAuth: true,
           builder: (context, params) => const SolicitudesEliminarWidget(),
+        ),
+        FFRoute(
+          name: 'HistorialPedidos',
+          path: '/historialPedidos',
+          requireAuth: true,
+          builder: (context, params) => const HistorialPedidosWidget(),
+        ),
+        FFRoute(
+          name: 'HistorialPedidos2',
+          path: '/historialPedidos2',
+          requireAuth: true,
+          builder: (context, params) => HistorialPedidos2Widget(
+            idPersona: params.getParam<PersonasRow>(
+              'idPersona',
+              ParamType.SupabaseRow,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'VerPedidoHistorial',
+          path: '/verPedidoHistorial',
+          requireAuth: true,
+          builder: (context, params) => VerPedidoHistorialWidget(
+            idPedido: params.getParam<PedidosRow>(
+              'idPedido',
+              ParamType.SupabaseRow,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

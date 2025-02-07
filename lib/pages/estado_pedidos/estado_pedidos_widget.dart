@@ -449,41 +449,6 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                                                   16.0, 10.0, 0.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                'Total de Solicitudes: ',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                              ),
-                                              Text(
-                                                containerPedidosRowList.length
-                                                    .toString(),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  16.0, 10.0, 0.0, 10.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Text(
                                                 'Estado de pedido: ',
@@ -786,7 +751,7 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                                                               valueOrDefault<
                                                                   String>(
                                                                 dateTimeFormat(
-                                                                    "yMMMd",
+                                                                    "d/M/y",
                                                                     listaPedidosItem
                                                                         .fecha),
                                                                 '1',

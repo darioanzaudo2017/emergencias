@@ -110,7 +110,8 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                       width: MediaQuery.sizeOf(context).width *
                                           0.9,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xCCFFFFFF),
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
                                         boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 8.0,
@@ -863,7 +864,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
                                                                   color: const Color(
-                                                                      0xFF57636C),
+                                                                      0xFF14181B),
                                                                   fontSize:
                                                                       14.0,
                                                                   letterSpacing:
@@ -881,7 +882,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
                                                                   color: const Color(
-                                                                      0xFF57636C),
+                                                                      0xFF14181B),
                                                                   fontSize:
                                                                       14.0,
                                                                   letterSpacing:
@@ -992,7 +993,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
                                                                   color: const Color(
-                                                                      0xFF57636C),
+                                                                      0xFF14181B),
                                                                   fontSize:
                                                                       14.0,
                                                                   letterSpacing:
@@ -1011,7 +1012,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
                                                                   color: const Color(
-                                                                      0xFF57636C),
+                                                                      0xFF14181B),
                                                                   fontSize:
                                                                       14.0,
                                                                   letterSpacing:
@@ -1075,23 +1076,20 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         filled: true,
                                                         fillColor: Colors.white,
                                                       ),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Plus Jakarta Sans',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryText,
-                                                                fontSize: 14.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Plus Jakarta Sans',
+                                                            color: const Color(
+                                                                0xFF14181B),
+                                                            fontSize: 14.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                          ),
                                                       validator: _model
                                                           .textObservacionesTextControllerValidator
                                                           .asValidator(context),

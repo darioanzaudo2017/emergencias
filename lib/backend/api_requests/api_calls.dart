@@ -320,16 +320,16 @@ class ReadpedidosunicosCall {
       ));
 }
 
-class BuscarPersonaCall {
+class BuscarpersonaCall {
   static Future<ApiCallResponse> call({
-    String? buscar = '',
+    String? buscar = '41',
   }) async {
     final ffApiRequestBody = '''
 {
   "palabra_clave": "${escapeStringForJson(buscar)}"
 }''';
     return ApiManager.instance.makeApiCall(
-      callName: 'buscar persona',
+      callName: 'buscarpersona',
       apiUrl:
           'https://yhzjwpsmhlufcxdaedde.supabase.co/rest/v1/rpc/buscar_persona',
       callType: ApiCallType.POST,
@@ -416,6 +416,109 @@ class BuscarPorEstadoCall {
   static String? dni(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$[:].dni''',
+      ));
+}
+
+class DireccionCatastroCall {
+  static Future<ApiCallResponse> call({
+    String? token =
+        'kk7cwRzflXKSU3kbLbuA-ySyQto8kvxRlbXFD1KUDV2uZVrMkHj-xFOxnCfVFguoyYLpLBShicc-FPIVX6FzgWzDyyl8OmPns7E1q2G6eAFT_YDSjm_pSxvu8wsJjT7tfBf8NB_VX8MwIdVNJWMbxo3_fVUtsGAd9RaCSm_L6vkDrZSQN02VZaZ9HvCoD2goTy357JYL3XZbi-xVjJ7TCCcHTzwOTkACEbSo-T1Y5OI.',
+    String? calle = 'SAN MARTIN 42 - CENTRO',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'direccionCatastro',
+      apiUrl:
+          'https://gis.cordoba.gob.ar/server/rest/services/Catastro/catastro_integra_api/FeatureServer/22/query',
+      callType: ApiCallType.POST,
+      headers: {
+        'username': 'politicas.sociales.api',
+        'password': 'PsocialesAPI2024#',
+        'referer': 'https://inteligenciaterritorial.cordoba.gob.ar/portal',
+        'expiration': '60',
+        'f': 'json',
+      },
+      params: {
+        'token': "$token",
+        'where': "direccioncompleta=\'$calle\'",
+        'outFields': "*",
+        'j': "json",
+      },
+      bodyType: BodyType.X_WWW_FORM_URL_ENCODED,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  static List<String>? direccioncompleta(dynamic response) => (getJsonField(
+        response,
+        r'''$.features[:].attributes.direccioncompleta''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  static List<int>? reloid(dynamic response) => (getJsonField(
+        response,
+        r'''$.features[:].attributes.reloid''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  static List<int>? numeracion(dynamic response) => (getJsonField(
+        response,
+        r'''$.features[:].attributes.numeracion''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  static List<int>? idunidad(dynamic response) => (getJsonField(
+        response,
+        r'''$.features[:].attributes.idunidad''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+}
+
+class PedirtokencatastroCall {
+  static Future<ApiCallResponse> call() async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'pedirtokencatastro',
+      apiUrl:
+          'https://inteligenciaterritorial.cordoba.gob.ar/portal/sharing/rest/generateToken',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {
+        'username': "politicas.sociales.api",
+        'password': "PsocialesAPI2024#",
+        'referer': "https://inteligenciaterritorial.cordoba.gob.ar/portal",
+        'expiration': 60,
+        'f': "json",
+      },
+      bodyType: BodyType.X_WWW_FORM_URL_ENCODED,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  static String? token(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$.token''',
       ));
 }
 
