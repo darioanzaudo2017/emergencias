@@ -108,4 +108,33 @@ class FFAppState extends ChangeNotifier {
   void insertAtIndexInListpedidounico(int index, PedidoUnicoStruct value) {
     listpedidounico.insert(index, value);
   }
+
+  List<PlaceStruct> _listadirecciones = [];
+  List<PlaceStruct> get listadirecciones => _listadirecciones;
+  set listadirecciones(List<PlaceStruct> value) {
+    _listadirecciones = value;
+  }
+
+  void addToListadirecciones(PlaceStruct value) {
+    listadirecciones.add(value);
+  }
+
+  void removeFromListadirecciones(PlaceStruct value) {
+    listadirecciones.remove(value);
+  }
+
+  void removeAtIndexFromListadirecciones(int index) {
+    listadirecciones.removeAt(index);
+  }
+
+  void updateListadireccionesAtIndex(
+    int index,
+    PlaceStruct Function(PlaceStruct) updateFn,
+  ) {
+    listadirecciones[index] = updateFn(_listadirecciones[index]);
+  }
+
+  void insertAtIndexInListadirecciones(int index, PlaceStruct value) {
+    listadirecciones.insert(index, value);
+  }
 }

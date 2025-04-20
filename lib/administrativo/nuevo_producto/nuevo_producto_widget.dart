@@ -13,6 +13,9 @@ export 'nuevo_producto_model.dart';
 class NuevoProductoWidget extends StatefulWidget {
   const NuevoProductoWidget({super.key});
 
+  static String routeName = 'NuevoProducto';
+  static String routePath = '/nuevoProducto';
+
   @override
   State<NuevoProductoWidget> createState() => _NuevoProductoWidgetState();
 }
@@ -61,7 +64,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -71,11 +74,11 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
             wrapWithModel(
               model: _model.menulateralwebModel,
               updateCallback: () => safeSetState(() {}),
-              child: const MenulateralwebWidget(),
+              child: MenulateralwebWidget(),
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10.0),
                 child: Container(
                   width: double.infinity,
                   height: double.infinity,
@@ -104,17 +107,17 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.85, -0.4),
+                                    alignment: AlignmentDirectional(0.85, -0.4),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 50.0, 0.0, 0.0),
                                       child: FlutterFlowIconButton(
                                         borderColor: Colors.transparent,
                                         borderRadius: 30.0,
                                         borderWidth: 1.0,
                                         buttonSize: 40.0,
-                                        fillColor: const Color(0x7F0F1113),
-                                        icon: const Icon(
+                                        fillColor: Color(0x7F0F1113),
+                                        icon: Icon(
                                           Icons.close_rounded,
                                           color: Colors.white,
                                           size: 20.0,
@@ -128,7 +131,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                 ],
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 16.0, 24.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -141,7 +144,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        offset: const Offset(
+                                        offset: Offset(
                                           0.0,
                                           1.0,
                                         ),
@@ -157,7 +160,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                           controller: _model
                                                   .dropRubroValueController ??=
                                               FormFieldController<String>(null),
-                                          options: const [
+                                          options: [
                                             'Alimento',
                                             'Vivienda',
                                             'Salud',
@@ -194,7 +197,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                           borderWidth: 2.0,
                                           borderRadius: 8.0,
                                           margin:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           hidesUnderline: true,
                                           isOverButton: false,
@@ -207,7 +210,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 1.0, 24.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -220,7 +223,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        offset: const Offset(
+                                        offset: Offset(
                                           0.0,
                                           1.0,
                                         ),
@@ -232,7 +235,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Expanded(
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 200.0,
                                           child: TextFormField(
                                             controller: _model
@@ -272,7 +275,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -325,7 +328,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 1.0, 24.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -338,7 +341,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        offset: const Offset(
+                                        offset: Offset(
                                           0.0,
                                           1.0,
                                         ),
@@ -350,7 +353,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Disponibilidad',
@@ -363,7 +366,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Switch.adaptive(
                                           value: _model.switchValue!,
@@ -390,7 +393,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 1.0, 24.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -403,7 +406,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        offset: const Offset(
+                                        offset: Offset(
                                           0.0,
                                           1.0,
                                         ),
@@ -444,7 +447,7 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                                 ),
                                               ),
                                               duration:
-                                                  const Duration(milliseconds: 4000),
+                                                  Duration(milliseconds: 4000),
                                               backgroundColor:
                                                   FlutterFlowTheme.of(context)
                                                       .secondary,
@@ -456,10 +459,10 @@ class _NuevoProductoWidgetState extends State<NuevoProductoWidget> {
                                         options: FFButtonOptions(
                                           height: 40.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .primary,

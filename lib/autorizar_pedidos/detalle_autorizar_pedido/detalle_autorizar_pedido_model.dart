@@ -2,6 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/componentes/menulateralweb/menulateralweb_widget.dart';
 import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'dart:async';
 import 'detalle_autorizar_pedido_widget.dart' show DetalleAutorizarPedidoWidget;
 import 'package:flutter/material.dart';
@@ -103,7 +104,7 @@ class DetalleAutorizarPedidoModel
   }) async {
     final stopwatch = Stopwatch()..start();
     while (true) {
-      await Future.delayed(const Duration(milliseconds: 50));
+      await Future.delayed(Duration(milliseconds: 50));
       final timeElapsed = stopwatch.elapsedMilliseconds;
       final requestComplete = requestCompleter?.isCompleted ?? false;
       if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {

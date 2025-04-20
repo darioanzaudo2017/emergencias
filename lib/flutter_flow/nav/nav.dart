@@ -9,9 +9,10 @@ import '/backend/supabase/supabase.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
-import '/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+
+import '/index.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -79,51 +80,51 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) => appStateNotifier.loggedIn
-          ? const EstadoPedidosWidget()
-          : const Auth2LoginWidget(),
+          ? EstadoPedidosWidget()
+          : Auth2LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? const EstadoPedidosWidget()
-              : const Auth2LoginWidget(),
+              ? EstadoPedidosWidget()
+              : Auth2LoginWidget(),
         ),
         FFRoute(
-          name: 'auth_2_Create',
-          path: '/auth2Create',
-          builder: (context, params) => const Auth2CreateWidget(),
+          name: Auth2CreateWidget.routeName,
+          path: Auth2CreateWidget.routePath,
+          builder: (context, params) => Auth2CreateWidget(),
         ),
         FFRoute(
-          name: 'auth_2_Login',
-          path: '/auth2Login',
-          builder: (context, params) => const Auth2LoginWidget(),
+          name: Auth2LoginWidget.routeName,
+          path: Auth2LoginWidget.routePath,
+          builder: (context, params) => Auth2LoginWidget(),
         ),
         FFRoute(
-          name: 'auth_2_ForgotPassword',
-          path: '/auth2ForgotPassword',
-          builder: (context, params) => const Auth2ForgotPasswordWidget(),
+          name: Auth2ForgotPasswordWidget.routeName,
+          path: Auth2ForgotPasswordWidget.routePath,
+          builder: (context, params) => Auth2ForgotPasswordWidget(),
         ),
         FFRoute(
-          name: 'auth_2_EditProfile',
-          path: '/auth2EditProfile',
-          builder: (context, params) => const Auth2EditProfileWidget(),
+          name: Auth2EditProfileWidget.routeName,
+          path: Auth2EditProfileWidget.routePath,
+          builder: (context, params) => Auth2EditProfileWidget(),
         ),
         FFRoute(
-          name: 'HerramientasAdministrativas',
-          path: '/herramientasAdministrativas',
+          name: HerramientasAdministrativasWidget.routeName,
+          path: HerramientasAdministrativasWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const HerramientasAdministrativasWidget(),
+          builder: (context, params) => HerramientasAdministrativasWidget(),
         ),
         FFRoute(
-          name: 'ListadeUsuariosSinAsignar',
-          path: '/listadeUsuariosSinAsignar',
+          name: ListadeUsuariosSinAsignarWidget.routeName,
+          path: ListadeUsuariosSinAsignarWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const ListadeUsuariosSinAsignarWidget(),
+          builder: (context, params) => ListadeUsuariosSinAsignarWidget(),
         ),
         FFRoute(
-          name: 'DetalleRol',
-          path: '/detalleRol',
+          name: DetalleRolWidget.routeName,
+          path: DetalleRolWidget.routePath,
           requireAuth: true,
           builder: (context, params) => DetalleRolWidget(
             idUsuario: params.getParam<UsuariosRow>(
@@ -133,55 +134,63 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'ListadeUsuarios',
-          path: '/ListaUsuarios',
+          name: ListadeUsuariosWidget.routeName,
+          path: ListadeUsuariosWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const ListadeUsuariosWidget(),
+          builder: (context, params) => ListadeUsuariosWidget(),
         ),
         FFRoute(
-          name: 'Solicitudes',
-          path: '/solicitudes',
+          name: SolicitudesWidget.routeName,
+          path: SolicitudesWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const SolicitudesWidget(),
+          builder: (context, params) => SolicitudesWidget(),
         ),
         FFRoute(
-          name: 'PaneldeEntregas',
-          path: '/paneldeEntregas',
+          name: PaneldeEntregasWidget.routeName,
+          path: PaneldeEntregasWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const PaneldeEntregasWidget(),
+          builder: (context, params) => PaneldeEntregasWidget(),
         ),
         FFRoute(
-          name: 'AutorizarPedidos',
-          path: '/autorizarPedidos',
+          name: AutorizarPedidosWidget.routeName,
+          path: AutorizarPedidosWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const AutorizarPedidosWidget(),
+          builder: (context, params) => AutorizarPedidosWidget(),
         ),
         FFRoute(
-          name: 'PedidoNuevo',
-          path: '/pedidoNuevo',
+          name: PedidoNuevoWidget.routeName,
+          path: PedidoNuevoWidget.routePath,
           requireAuth: true,
           builder: (context, params) => PedidoNuevoWidget(
             personaNueva: params.getParam<PersonasRow>(
               'personaNueva',
               ParamType.SupabaseRow,
             ),
+            passDir: params.getParam(
+              'passDir',
+              ParamType.String,
+            ),
+            passCoo: params.getParam(
+              'passCoo',
+              ParamType.String,
+            ),
           ),
         ),
         FFRoute(
-          name: 'Productos',
-          path: '/productos',
+          name: ProductosWidget.routeName,
+          path: ProductosWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const ProductosWidget(),
+          builder: (context, params) => ProductosWidget(),
         ),
         FFRoute(
-          name: 'NuevoProducto',
-          path: '/nuevoProducto',
+          name: NuevoProductoWidget.routeName,
+          path: NuevoProductoWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const NuevoProductoWidget(),
+          builder: (context, params) => NuevoProductoWidget(),
         ),
         FFRoute(
-          name: 'EditarProducto',
-          path: '/editarProducto',
+          name: EditarProductoWidget.routeName,
+          path: EditarProductoWidget.routePath,
           requireAuth: true,
           builder: (context, params) => EditarProductoWidget(
             editarproducto: params.getParam<ProductosRow>(
@@ -191,20 +200,20 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'CargarPersona',
-          path: '/cargarPersona',
+          name: CargarPersonaWidget.routeName,
+          path: CargarPersonaWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const CargarPersonaWidget(),
+          builder: (context, params) => CargarPersonaWidget(),
         ),
         FFRoute(
-          name: 'NuevaPersona',
-          path: '/nuevaPersona',
+          name: NuevaPersonaWidget.routeName,
+          path: NuevaPersonaWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const NuevaPersonaWidget(),
+          builder: (context, params) => NuevaPersonaWidget(),
         ),
         FFRoute(
-          name: 'EditarPersona',
-          path: '/editarPersona',
+          name: EditarPersonaWidget.routeName,
+          path: EditarPersonaWidget.routePath,
           requireAuth: true,
           builder: (context, params) => EditarPersonaWidget(
             editarpersona: params.getParam<PersonasRow>(
@@ -214,8 +223,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'CargarArticulos',
-          path: '/cargarArticulos',
+          name: CargarArticulosWidget.routeName,
+          path: CargarArticulosWidget.routePath,
           requireAuth: true,
           builder: (context, params) => CargarArticulosWidget(
             detallePedido: params.getParam<PedidosRow>(
@@ -229,8 +238,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'VerPedido',
-          path: '/verPedido',
+          name: VerPedidoWidget.routeName,
+          path: VerPedidoWidget.routePath,
           requireAuth: true,
           builder: (context, params) => VerPedidoWidget(
             idPedido: params.getParam<PedidosRow>(
@@ -240,14 +249,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'EstadoPedidos',
-          path: '/estadoPedidos',
+          name: EstadoPedidosWidget.routeName,
+          path: EstadoPedidosWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const EstadoPedidosWidget(),
+          builder: (context, params) => EstadoPedidosWidget(),
         ),
         FFRoute(
-          name: 'detalleAutorizarPedido',
-          path: '/detalleAutorizarPedido',
+          name: DetalleAutorizarPedidoWidget.routeName,
+          path: DetalleAutorizarPedidoWidget.routePath,
           requireAuth: true,
           builder: (context, params) => DetalleAutorizarPedidoWidget(
             idPedido: params.getParam<PedidosRow>(
@@ -257,14 +266,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'AsignarPedidos',
-          path: '/asignarPedidos',
+          name: AsignarPedidosWidget.routeName,
+          path: AsignarPedidosWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const AsignarPedidosWidget(),
+          builder: (context, params) => AsignarPedidosWidget(),
         ),
         FFRoute(
-          name: 'detalleAsignarPedido',
-          path: '/detalleAsignarPedido',
+          name: DetalleAsignarPedidoWidget.routeName,
+          path: DetalleAsignarPedidoWidget.routePath,
           requireAuth: true,
           builder: (context, params) => DetalleAsignarPedidoWidget(
             idPedido: params.getParam<PedidosRow>(
@@ -274,8 +283,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'Asignacion',
-          path: '/asignacion',
+          name: AsignacionWidget.routeName,
+          path: AsignacionWidget.routePath,
           builder: (context, params) => AsignacionWidget(
             idPedido: params.getParam<PedidosRow>(
               'idPedido',
@@ -284,20 +293,20 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'Vehiculos',
-          path: '/vehiculos',
+          name: VehiculosWidget.routeName,
+          path: VehiculosWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const VehiculosWidget(),
+          builder: (context, params) => VehiculosWidget(),
         ),
         FFRoute(
-          name: 'NuevoVehiculo',
-          path: '/nuevoVehiculo',
+          name: NuevoVehiculoWidget.routeName,
+          path: NuevoVehiculoWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const NuevoVehiculoWidget(),
+          builder: (context, params) => NuevoVehiculoWidget(),
         ),
         FFRoute(
-          name: 'EditarVehiculo',
-          path: '/editarVehiculo',
+          name: EditarVehiculoWidget.routeName,
+          path: EditarVehiculoWidget.routePath,
           requireAuth: true,
           builder: (context, params) => EditarVehiculoWidget(
             editarVehiculo: params.getParam<VehiculosRow>(
@@ -307,8 +316,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'detallePanelEntrega',
-          path: '/detallePanelEntrega',
+          name: DetallePanelEntregaWidget.routeName,
+          path: DetallePanelEntregaWidget.routePath,
           requireAuth: true,
           builder: (context, params) => DetallePanelEntregaWidget(
             idPedido: params.getParam<PedidosRow>(
@@ -318,32 +327,32 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'CargarEditarPersona',
-          path: '/cargarEditarPersona',
+          name: CargarEditarPersonaWidget.routeName,
+          path: CargarEditarPersonaWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const CargarEditarPersonaWidget(),
+          builder: (context, params) => CargarEditarPersonaWidget(),
         ),
         FFRoute(
-          name: 'Ayuda',
-          path: '/ayuda',
+          name: AyudaWidget.routeName,
+          path: AyudaWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const AyudaWidget(),
+          builder: (context, params) => AyudaWidget(),
         ),
         FFRoute(
-          name: 'SolicitudesEliminar',
-          path: '/solicitudesEliminar',
+          name: SolicitudesEliminarWidget.routeName,
+          path: SolicitudesEliminarWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const SolicitudesEliminarWidget(),
+          builder: (context, params) => SolicitudesEliminarWidget(),
         ),
         FFRoute(
-          name: 'HistorialPedidos',
-          path: '/historialPedidos',
+          name: HistorialPedidosWidget.routeName,
+          path: HistorialPedidosWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => const HistorialPedidosWidget(),
+          builder: (context, params) => HistorialPedidosWidget(),
         ),
         FFRoute(
-          name: 'HistorialPedidos2',
-          path: '/historialPedidos2',
+          name: HistorialPedidos2Widget.routeName,
+          path: HistorialPedidos2Widget.routePath,
           requireAuth: true,
           builder: (context, params) => HistorialPedidos2Widget(
             idPersona: params.getParam<PersonasRow>(
@@ -353,12 +362,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'VerPedidoHistorial',
-          path: '/verPedidoHistorial',
+          name: VerPedidoHistorialWidget.routeName,
+          path: VerPedidoHistorialWidget.routePath,
           requireAuth: true,
           builder: (context, params) => VerPedidoHistorialWidget(
             idPedido: params.getParam<PedidosRow>(
               'idPedido',
+              ParamType.SupabaseRow,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: MapsWidget.routeName,
+          path: MapsWidget.routePath,
+          requireAuth: true,
+          builder: (context, params) => MapsWidget(
+            idPersonaMaps: params.getParam<PersonasRow>(
+              'idPersonaMaps',
               ParamType.SupabaseRow,
             ),
           ),
@@ -601,7 +621,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

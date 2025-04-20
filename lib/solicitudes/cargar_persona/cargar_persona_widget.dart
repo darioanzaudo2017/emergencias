@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'dart:async';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,9 @@ export 'cargar_persona_model.dart';
 
 class CargarPersonaWidget extends StatefulWidget {
   const CargarPersonaWidget({super.key});
+
+  static String routeName = 'CargarPersona';
+  static String routePath = '/cargarPersona';
 
   @override
   State<CargarPersonaWidget> createState() => _CargarPersonaWidgetState();
@@ -52,13 +56,13 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         floatingActionButton: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0),
           child: FloatingActionButton(
             onPressed: () async {
               context.pushNamed(
-                'NuevaPersona',
+                NuevaPersonaWidget.routeName,
                 extra: <String, dynamic>{
-                  kTransitionInfoKey: const TransitionInfo(
+                  kTransitionInfoKey: TransitionInfo(
                     hasTransition: true,
                     transitionType: PageTransitionType.fade,
                   ),
@@ -84,7 +88,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -96,13 +100,13 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
               wrapWithModel(
                 model: _model.menulateralwebModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const MenulateralwebWidget(),
+                child: MenulateralwebWidget(),
               ),
               Expanded(
                 child: Container(
                   width: 800.0,
                   height: double.infinity,
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 970.0,
                   ),
                   decoration: BoxDecoration(
@@ -113,14 +117,14 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -128,7 +132,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x34090F13),
@@ -141,7 +145,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                     borderRadius: BorderRadius.circular(40.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 0.0, 0.0),
                                     child: TextFormField(
                                       controller:
@@ -150,7 +154,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                           _model.buscadorPersonasFocusNode,
                                       onChanged: (_) => EasyDebounce.debounce(
                                         '_model.buscadorPersonasTextController',
-                                        const Duration(milliseconds: 500),
+                                        Duration(milliseconds: 500),
                                         () async {
                                           safeSetState(() => _model
                                               .apiRequestCompleter = null);
@@ -172,7 +176,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                         errorBorder: InputBorder.none,
                                         focusedErrorBorder: InputBorder.none,
                                         contentPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 24.0, 12.0, 12.0, 12.0),
                                         prefixIcon: Icon(
                                           Icons.search_sharp,
@@ -198,7 +202,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: EdgeInsets.all(20.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -230,7 +234,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                   return Container(
                                     width: 600.0,
                                     height: 700.0,
-                                    constraints: const BoxConstraints(
+                                    constraints: BoxConstraints(
                                       maxWidth: 970.0,
                                     ),
                                     decoration: BoxDecoration(
@@ -242,7 +246,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 10.0, 0.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -317,7 +321,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                                   return Container(
                                                     width: 100.0,
                                                     height: 650.0,
-                                                    constraints: const BoxConstraints(
+                                                    constraints: BoxConstraints(
                                                       maxWidth: 950.0,
                                                     ),
                                                     decoration: BoxDecoration(
@@ -572,7 +576,7 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                                                             );
 
                                                                             context.pushNamed(
-                                                                              'EditarPersona',
+                                                                              EditarPersonaWidget.routeName,
                                                                               queryParameters: {
                                                                                 'editarpersona': serializeParam(
                                                                                   _model.query2?.firstOrNull,
@@ -589,12 +593,12 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                                                               FFButtonOptions(
                                                                             height:
                                                                                 40.0,
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 16.0,
                                                                                 0.0,
                                                                                 16.0,
                                                                                 0.0),
-                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -650,15 +654,23 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                                                             );
 
                                                                             context.pushNamed(
-                                                                              'PedidoNuevo',
+                                                                              PedidoNuevoWidget.routeName,
                                                                               queryParameters: {
                                                                                 'personaNueva': serializeParam(
                                                                                   _model.query3?.firstOrNull,
                                                                                   ParamType.SupabaseRow,
                                                                                 ),
+                                                                                'passDir': serializeParam(
+                                                                                  '',
+                                                                                  ParamType.String,
+                                                                                ),
+                                                                                'passCoo': serializeParam(
+                                                                                  '',
+                                                                                  ParamType.String,
+                                                                                ),
                                                                               }.withoutNulls,
                                                                               extra: <String, dynamic>{
-                                                                                kTransitionInfoKey: const TransitionInfo(
+                                                                                kTransitionInfoKey: TransitionInfo(
                                                                                   hasTransition: true,
                                                                                   transitionType: PageTransitionType.fade,
                                                                                 ),
@@ -673,12 +685,12 @@ class _CargarPersonaWidgetState extends State<CargarPersonaWidget> {
                                                                               FFButtonOptions(
                                                                             height:
                                                                                 40.0,
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 16.0,
                                                                                 0.0,
                                                                                 16.0,
                                                                                 0.0),
-                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,

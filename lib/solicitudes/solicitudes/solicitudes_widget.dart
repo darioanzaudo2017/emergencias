@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'dart:async';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,9 @@ export 'solicitudes_model.dart';
 
 class SolicitudesWidget extends StatefulWidget {
   const SolicitudesWidget({super.key});
+
+  static String routeName = 'Solicitudes';
+  static String routePath = '/solicitudes';
 
   @override
   State<SolicitudesWidget> createState() => _SolicitudesWidgetState();
@@ -84,13 +88,13 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             floatingActionButton: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0),
               child: FloatingActionButton(
                 onPressed: () async {
                   context.pushNamed(
-                    'CargarPersona',
+                    CargarPersonaWidget.routeName,
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: const TransitionInfo(
+                      kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.fade,
                       ),
@@ -116,7 +120,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -128,13 +132,13 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                   wrapWithModel(
                     model: _model.menulateralwebModel,
                     updateCallback: () => safeSetState(() {}),
-                    child: const MenulateralwebWidget(),
+                    child: MenulateralwebWidget(),
                   ),
                   Expanded(
                     child: Container(
                       width: 800.0,
                       height: double.infinity,
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxWidth: 970.0,
                       ),
                       decoration: BoxDecoration(
@@ -144,7 +148,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -153,7 +157,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
                                     child: Container(
                                       width: 400.0,
@@ -161,7 +165,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x34090F13),
@@ -175,7 +179,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                                             BorderRadius.circular(40.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: TextFormField(
                                           controller:
@@ -184,7 +188,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                                           onChanged: (_) =>
                                               EasyDebounce.debounce(
                                             '_model.buscadorTextController',
-                                            const Duration(milliseconds: 500),
+                                            Duration(milliseconds: 500),
                                             () async {
                                               safeSetState(() => _model
                                                   .apiRequestCompleter = null);
@@ -208,7 +212,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                                             focusedErrorBorder:
                                                 InputBorder.none,
                                             contentPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 12.0, 12.0, 12.0),
                                             prefixIcon: Icon(
                                               Icons.search_sharp,
@@ -235,7 +239,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(20.0),
+                            padding: EdgeInsets.all(20.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -267,7 +271,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                                       return Container(
                                         width: 600.0,
                                         height: 700.0,
-                                        constraints: const BoxConstraints(
+                                        constraints: BoxConstraints(
                                           maxWidth: 970.0,
                                         ),
                                         decoration: BoxDecoration(
@@ -278,7 +282,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 10.0, 0.0, 10.0),
                                               child: Row(
@@ -724,7 +728,7 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
 
                                                                           context
                                                                               .pushNamed(
-                                                                            'VerPedido',
+                                                                            VerPedidoWidget.routeName,
                                                                             queryParameters:
                                                                                 {
                                                                               'idPedido': serializeParam(
@@ -743,12 +747,12 @@ class _SolicitudesWidgetState extends State<SolicitudesWidget> {
                                                                             FFButtonOptions(
                                                                           height:
                                                                               40.0,
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               0.0,
                                                                               16.0,
                                                                               0.0),
-                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,

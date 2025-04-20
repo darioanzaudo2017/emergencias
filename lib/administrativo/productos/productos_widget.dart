@@ -4,12 +4,16 @@ import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'productos_model.dart';
 export 'productos_model.dart';
 
 class ProductosWidget extends StatefulWidget {
   const ProductosWidget({super.key});
+
+  static String routeName = 'Productos';
+  static String routePath = '/productos';
 
   @override
   State<ProductosWidget> createState() => _ProductosWidgetState();
@@ -70,13 +74,13 @@ class _ProductosWidgetState extends State<ProductosWidget> {
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             floatingActionButton: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0),
               child: FloatingActionButton(
                 onPressed: () async {
                   context.pushNamed(
-                    'NuevoProducto',
+                    NuevoProductoWidget.routeName,
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: const TransitionInfo(
+                      kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.leftToRight,
                       ),
@@ -102,7 +106,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -114,7 +118,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                   wrapWithModel(
                     model: _model.menulateralwebModel,
                     updateCallback: () => safeSetState(() {}),
-                    child: const MenulateralwebWidget(),
+                    child: MenulateralwebWidget(),
                   ),
                   Expanded(
                     child: Container(
@@ -131,7 +135,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Text(
                                   'Productos Disponibles',
@@ -151,7 +155,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                             children: [
                               Expanded(
                                 child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
+                                  padding: EdgeInsets.all(10.0),
                                   child: Container(
                                     width: 300.0,
                                     height: 650.0,
@@ -160,7 +164,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                           .secondaryBackground,
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsets.all(10.0),
+                                      padding: EdgeInsets.all(10.0),
                                       child: Builder(
                                         builder: (context) {
                                           final listaProductos =
@@ -376,7 +380,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                         FFButtonWidget(
                                                           onPressed: () async {
                                                             context.pushNamed(
-                                                              'EditarProducto',
+                                                              EditarProductoWidget
+                                                                  .routeName,
                                                               queryParameters: {
                                                                 'editarproducto':
                                                                     serializeParam(
@@ -388,7 +393,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                               extra: <String,
                                                                   dynamic>{
                                                                 kTransitionInfoKey:
-                                                                    const TransitionInfo(
+                                                                    TransitionInfo(
                                                                   hasTransition:
                                                                       true,
                                                                   transitionType:
@@ -406,14 +411,14 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                               FFButtonOptions(
                                                             height: 40.0,
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         0.0,
                                                                         16.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,

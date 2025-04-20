@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'dart:async';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,9 @@ export 'solicitudes_eliminar_model.dart';
 
 class SolicitudesEliminarWidget extends StatefulWidget {
   const SolicitudesEliminarWidget({super.key});
+
+  static String routeName = 'SolicitudesEliminar';
+  static String routePath = '/solicitudesEliminar';
 
   @override
   State<SolicitudesEliminarWidget> createState() =>
@@ -53,13 +57,13 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         floatingActionButton: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0),
           child: FloatingActionButton(
             onPressed: () async {
               context.pushNamed(
-                'CargarPersona',
+                CargarPersonaWidget.routeName,
                 extra: <String, dynamic>{
-                  kTransitionInfoKey: const TransitionInfo(
+                  kTransitionInfoKey: TransitionInfo(
                     hasTransition: true,
                     transitionType: PageTransitionType.fade,
                   ),
@@ -85,7 +89,7 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -97,13 +101,13 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
               wrapWithModel(
                 model: _model.menulateralwebModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const MenulateralwebWidget(),
+                child: MenulateralwebWidget(),
               ),
               Expanded(
                 child: Container(
                   width: 800.0,
                   height: double.infinity,
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 970.0,
                   ),
                   decoration: BoxDecoration(
@@ -114,7 +118,7 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -122,7 +126,7 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
                                 child: Container(
                                   width: 400.0,
@@ -130,7 +134,7 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x34090F13),
@@ -143,14 +147,14 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                                     borderRadius: BorderRadius.circular(40.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 0.0, 0.0),
                                     child: TextFormField(
                                       controller: _model.buscadorTextController,
                                       focusNode: _model.buscadorFocusNode,
                                       onChanged: (_) => EasyDebounce.debounce(
                                         '_model.buscadorTextController',
-                                        const Duration(milliseconds: 500),
+                                        Duration(milliseconds: 500),
                                         () async {
                                           safeSetState(() => _model
                                               .apiRequestCompleter = null);
@@ -172,7 +176,7 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                                         errorBorder: InputBorder.none,
                                         focusedErrorBorder: InputBorder.none,
                                         contentPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 24.0, 12.0, 12.0, 12.0),
                                         prefixIcon: Icon(
                                           Icons.search_sharp,
@@ -198,7 +202,7 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: EdgeInsets.all(20.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -230,7 +234,7 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                                   return Container(
                                     width: 600.0,
                                     height: 700.0,
-                                    constraints: const BoxConstraints(
+                                    constraints: BoxConstraints(
                                       maxWidth: 970.0,
                                     ),
                                     decoration: BoxDecoration(
@@ -242,7 +246,7 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 10.0, 0.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -670,16 +674,16 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                                                                             builder:
                                                                                 (alertDialogContext) {
                                                                               return AlertDialog(
-                                                                                title: const Text('Eliminar Solicitud'),
-                                                                                content: const Text('Desea Eliminar la Solicitud seleccionada?'),
+                                                                                title: Text('Eliminar Solicitud'),
+                                                                                content: Text('Desea Eliminar la Solicitud seleccionada?'),
                                                                                 actions: [
                                                                                   TextButton(
                                                                                     onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                    child: const Text('Cancelar'),
+                                                                                    child: Text('Cancelar'),
                                                                                   ),
                                                                                   TextButton(
                                                                                     onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                    child: const Text('Confirmar'),
+                                                                                    child: Text('Confirmar'),
                                                                                   ),
                                                                                 ],
                                                                               );
@@ -709,7 +713,7 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                                                                               ),
                                                                             ),
                                                                             duration:
-                                                                                const Duration(milliseconds: 4000),
+                                                                                Duration(milliseconds: 4000),
                                                                             backgroundColor:
                                                                                 FlutterFlowTheme.of(context).secondary,
                                                                           ),
@@ -730,12 +734,12 @@ class _SolicitudesEliminarWidgetState extends State<SolicitudesEliminarWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           40.0,
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
-                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,

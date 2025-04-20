@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'estado_pedidos_model.dart';
@@ -12,6 +13,9 @@ export 'estado_pedidos_model.dart';
 
 class EstadoPedidosWidget extends StatefulWidget {
   const EstadoPedidosWidget({super.key});
+
+  static String routeName = 'EstadoPedidos';
+  static String routePath = '/estadoPedidos';
 
   @override
   State<EstadoPedidosWidget> createState() => _EstadoPedidosWidgetState();
@@ -96,7 +100,7 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -104,9 +108,9 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                     highlightColor: Colors.transparent,
                     onTap: () async {
                       context.pushNamed(
-                        'Ayuda',
+                        AyudaWidget.routeName,
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 0),
@@ -135,14 +139,14 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                   wrapWithModel(
                     model: _model.menulateralwebModel,
                     updateCallback: () => safeSetState(() {}),
-                    child: const MenulateralwebWidget(),
+                    child: MenulateralwebWidget(),
                   ),
                   if (estadoPedidosUsuariosRow?.rol != 'No Asignado')
                     Expanded(
                       child: Container(
                         width: 100.0,
                         height: double.infinity,
-                        constraints: const BoxConstraints(
+                        constraints: BoxConstraints(
                           maxWidth: 970.0,
                         ),
                         decoration: BoxDecoration(
@@ -192,7 +196,7 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                                               .secondary,
                                         ),
                                         child: Padding(
-                                          padding: const EdgeInsets.all(15.0),
+                                          padding: EdgeInsets.all(15.0),
                                           child: Container(
                                             width: double.infinity,
                                             height: double.infinity,
@@ -235,7 +239,7 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -341,8 +345,8 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                                                                             ? FlutterFlowTheme.of(context)
                                                                                 .warning
                                                                             : (conteoestadosItem.estado == 'Para Asignar'
-                                                                                ? const Color(0xFF0050FF)
-                                                                                : (conteoestadosItem.estado == 'Asignado' ? const Color(0xFF81F47A) : (conteoestadosItem.estado == 'No Entregado' ? FlutterFlowTheme.of(context).error : const Color(0xFFFF0000))))),
+                                                                                ? Color(0xFF0050FF)
+                                                                                : (conteoestadosItem.estado == 'Asignado' ? Color(0xFF81F47A) : (conteoestadosItem.estado == 'No Entregado' ? FlutterFlowTheme.of(context).error : Color(0xFFFF0000))))),
                                                                     borderRadius:
                                                                         BorderRadius.circular(
                                                                             20.0),
@@ -354,7 +358,7 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                                                                                   .estadopedido
                                                                           ? FlutterFlowTheme.of(context)
                                                                               .success
-                                                                          : const Color(
+                                                                          : Color(
                                                                               0x00000000),
                                                                     ),
                                                                   ),
@@ -395,7 +399,7 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                                                       ],
                                                     );
                                                   }).divide(
-                                                      const SizedBox(width: 5.0)),
+                                                      SizedBox(width: 5.0)),
                                                 );
                                               },
                                             ),
@@ -445,7 +449,7 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 10.0, 0.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -480,7 +484,7 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -881,7 +885,8 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                                                                       () async {
                                                                     context
                                                                         .pushNamed(
-                                                                      'VerPedido',
+                                                                      VerPedidoWidget
+                                                                          .routeName,
                                                                       queryParameters:
                                                                           {
                                                                         'idPedido':
@@ -899,14 +904,14 @@ class _EstadoPedidosWidgetState extends State<EstadoPedidosWidget> {
                                                                       FFButtonOptions(
                                                                     height:
                                                                         40.0,
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             0.0,
                                                                             16.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
+                                                                        EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,

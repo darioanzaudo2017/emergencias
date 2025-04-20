@@ -18,6 +18,9 @@ export 'asignar_pedidos_model.dart';
 class AsignarPedidosWidget extends StatefulWidget {
   const AsignarPedidosWidget({super.key});
 
+  static String routeName = 'AsignarPedidos';
+  static String routePath = '/asignarPedidos';
+
   @override
   State<AsignarPedidosWidget> createState() => _AsignarPedidosWidgetState();
 }
@@ -99,7 +102,7 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -113,13 +116,13 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                   wrapWithModel(
                     model: _model.menulateralwebModel,
                     updateCallback: () => safeSetState(() {}),
-                    child: const MenulateralwebWidget(),
+                    child: MenulateralwebWidget(),
                   ),
                   Expanded(
                     child: Container(
                       width: 800.0,
                       height: double.infinity,
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxWidth: 970.0,
                       ),
                       decoration: BoxDecoration(
@@ -129,7 +132,7 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -137,7 +140,7 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
                                     child: Container(
                                       width: double.infinity,
@@ -145,7 +148,7 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x34090F13),
@@ -159,7 +162,7 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                                             BorderRadius.circular(40.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: TextFormField(
                                           controller: _model
@@ -169,7 +172,7 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                                           onChanged: (_) =>
                                               EasyDebounce.debounce(
                                             '_model.buscadorSolicitudTextController',
-                                            const Duration(milliseconds: 2000),
+                                            Duration(milliseconds: 2000),
                                             () async {
                                               safeSetState(() => _model
                                                   .apiRequestCompleter = null);
@@ -193,7 +196,7 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                                             focusedErrorBorder:
                                                 InputBorder.none,
                                             contentPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 12.0, 12.0, 12.0),
                                             prefixIcon: Icon(
                                               Icons.search_sharp,
@@ -220,7 +223,7 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.all(20.0),
+                            padding: EdgeInsets.all(20.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -257,7 +260,7 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                                       return Container(
                                         width: 600.0,
                                         height: 700.0,
-                                        constraints: const BoxConstraints(
+                                        constraints: BoxConstraints(
                                           maxWidth: 970.0,
                                         ),
                                         decoration: BoxDecoration(
@@ -268,7 +271,7 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 10.0, 0.0, 10.0),
                                               child: Row(
@@ -743,6 +746,10 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                                                                                 ).toString(),
                                                                                 getJsonField(
                                                                                   listaPedidosSolItem,
+                                                                                  r'''$.coordenadas''',
+                                                                                ).toString(),
+                                                                                getJsonField(
+                                                                                  listaPedidosSolItem,
                                                                                   r'''$.observaciones''',
                                                                                 ).toString(),
                                                                                 getJsonField(
@@ -768,7 +775,7 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
                                                                                     ),
                                                                                   ),
-                                                                                  duration: const Duration(milliseconds: 4000),
+                                                                                  duration: Duration(milliseconds: 4000),
                                                                                   backgroundColor: FlutterFlowTheme.of(context).secondary,
                                                                                 ),
                                                                               );
@@ -782,8 +789,8 @@ class _AsignarPedidosWidgetState extends State<AsignarPedidosWidget> {
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 40.0,
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).accent3,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Readex Pro',

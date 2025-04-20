@@ -1,4 +1,5 @@
 import 'dart:convert';
+import '../cloud_functions/cloud_functions.dart';
 
 import 'package:flutter/foundation.dart';
 
@@ -15,7 +16,7 @@ class BuscarpedidosCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "search_query": "$textobuscar"
+  "search_query": "${textobuscar}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Buscarpedidos',
@@ -107,7 +108,7 @@ class VistapedidosCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "idparameter": $idpersona
+  "idparameter": ${idpersona}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'vistapedidos',
@@ -245,7 +246,7 @@ class ListaPorPedidosCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "idparameterpedido": $iddelpedido
+  "idparameterpedido": ${iddelpedido}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'lista por pedidos',
@@ -279,7 +280,7 @@ class ReadpedidosunicosCall {
     return ApiManager.instance.makeApiCall(
       callName: 'readpedidosunicos',
       apiUrl:
-          'https://yhzjwpsmhlufcxdaedde.supabase.co/rest/v1/DetalledePedido?idPedido=eq.$id&select=*\'',
+          'https://yhzjwpsmhlufcxdaedde.supabase.co/rest/v1/DetalledePedido?idPedido=eq.${id}&select=*\'',
       callType: ApiCallType.GET,
       headers: {
         'apikey':
@@ -438,8 +439,8 @@ class DireccionCatastroCall {
         'f': 'json',
       },
       params: {
-        'token': "$token",
-        'where': "direccioncompleta=\'$calle\'",
+        'token': "${token}",
+        'where': "direccioncompleta=\'${calle}\'",
         'outFields': "*",
         'j': "json",
       },
@@ -520,6 +521,74 @@ class PedirtokencatastroCall {
         response,
         r'''$.token''',
       ));
+}
+
+class GooglePlacesAutocompleteCall {
+  static Future<ApiCallResponse> call({
+    String? searchText = 'san martin 456 cordoba capital',
+    String? key,
+  }) async {
+    key ??= FFAppConstants.apimaps;
+
+    final response = await makeCloudCall(
+      _kPrivateApiFunctionName,
+      {
+        'callName': 'GooglePlacesAutocompleteCall',
+        'variables': {
+          'searchText': searchText,
+          'key': key,
+        },
+      },
+    );
+    return ApiCallResponse.fromCloudCallResponse(response);
+  }
+
+  static List? direcciones(dynamic response) => getJsonField(
+        response,
+        r'''$.predictions''',
+        true,
+      ) as List?;
+  static List<String>? direccion2(dynamic response) => (getJsonField(
+        response,
+        r'''$.predictions[:].description''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  static List<String>? idplace(dynamic response) => (getJsonField(
+        response,
+        r'''$.predictions[:].place_id''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+}
+
+class CoordenandaapicallCall {
+  static Future<ApiCallResponse> call() async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'coordenandaapicall',
+      apiUrl: 'https://maps.googleapis.com/maps/api/place/details/json',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {
+        'place_id':
+            "EjdTYW4gTWFydMOtbiA1NjIsIEPDs3Jkb2JhLCBDYXBpdGFsLCBDw7NyZG9iYSwgQXJnZW50aW5hIjESLwoUChIJo3RHpneYMpQRoqWWXRD7cy0QsgQqFAoSCevP2x53mDKUEWJjGVEIX5NH",
+        'fields': "formatted_address,geometry",
+        'key': "AIzaSyAjm29ADxN862NXpXO0U7nPRA839Brft9s",
+      },
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
 }
 
 class ApiPagingParams {

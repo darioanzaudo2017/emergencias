@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'detalle_panel_entrega_model.dart';
 export 'detalle_panel_entrega_model.dart';
@@ -17,6 +18,9 @@ class DetallePanelEntregaWidget extends StatefulWidget {
   });
 
   final PedidosRow? idPedido;
+
+  static String routeName = 'detallePanelEntrega';
+  static String routePath = '/detallePanelEntrega';
 
   @override
   State<DetallePanelEntregaWidget> createState() =>
@@ -87,7 +91,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -99,7 +103,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
               wrapWithModel(
                 model: _model.menulateralwebModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const MenulateralwebWidget(),
+                child: MenulateralwebWidget(),
               ),
               Expanded(
                 child: FutureBuilder<List<UsuariosRow>>(
@@ -183,20 +187,20 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                       return Container(
                                         width: double.infinity,
                                         height: 200.0,
-                                        decoration: const BoxDecoration(
+                                        decoration: BoxDecoration(
                                           color: Color(0xFF81F47A),
                                         ),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 24.0, 16.0, 24.0),
                                           child: Container(
                                             width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 0.9,
                                             decoration: BoxDecoration(
-                                              color: const Color(0xCCFFFFFF),
-                                              boxShadow: const [
+                                              color: Color(0xCCFFFFFF),
+                                              boxShadow: [
                                                 BoxShadow(
                                                   blurRadius: 8.0,
                                                   color: Color(0x36000000),
@@ -210,7 +214,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             child: Padding(
-                                              padding: const EdgeInsets.all(12.0),
+                                              padding: EdgeInsets.all(12.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -222,7 +226,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                         clipBehavior: Clip
                                                             .antiAliasWithSaveLayer,
                                                         color:
-                                                            const Color(0xFF81F47A),
+                                                            Color(0xFF81F47A),
                                                         shape:
                                                             RoundedRectangleBorder(
                                                           borderRadius:
@@ -230,7 +234,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   .circular(
                                                                       8.0),
                                                         ),
-                                                        child: const Padding(
+                                                        child: Padding(
                                                           padding:
                                                               EdgeInsets.all(
                                                                   8.0),
@@ -243,7 +247,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -258,7 +262,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -272,7 +276,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                     .override(
                                                                       fontFamily:
                                                                           'Outfit',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF14181B),
                                                                       fontSize:
                                                                           24.0,
@@ -286,7 +290,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -303,7 +307,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             5.0,
@@ -347,7 +351,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -364,7 +368,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             5.0,
@@ -409,7 +413,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -426,7 +430,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             5.0,
@@ -470,7 +474,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -487,7 +491,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             5.0,
@@ -528,7 +532,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -545,7 +549,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             5.0,
@@ -611,7 +615,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                   child: Container(
                                     width: double.infinity,
                                     height: 300.0,
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -620,7 +624,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 10.0, 16.0, 0.0),
                                                 child: Row(
@@ -635,7 +639,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Outfit',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFF14181B),
                                                             fontSize: 24.0,
                                                             letterSpacing: 0.0,
@@ -648,7 +652,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 0.0, 16.0, 16.0),
                                                 child: SingleChildScrollView(
@@ -666,7 +670,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                           Flexible(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           16.0,
@@ -690,7 +694,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xFF57636C),
                                                                         fontSize:
                                                                             14.0,
@@ -705,7 +709,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xFF57636C),
                                                                         fontSize:
                                                                             14.0,
@@ -717,7 +721,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   enabledBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFFE0E3E7),
                                                                       width:
@@ -730,7 +734,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   focusedBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFF4B39EF),
                                                                       width:
@@ -743,7 +747,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   errorBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFFFF5963),
                                                                       width:
@@ -756,7 +760,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   focusedErrorBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFFFF5963),
                                                                       width:
@@ -777,7 +781,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF14181B),
                                                                       fontSize:
                                                                           14.0,
@@ -797,7 +801,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                           Flexible(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           16.0,
@@ -821,7 +825,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xFF57636C),
                                                                         fontSize:
                                                                             14.0,
@@ -836,7 +840,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xFF57636C),
                                                                         fontSize:
                                                                             14.0,
@@ -848,7 +852,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   enabledBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFFE0E3E7),
                                                                       width:
@@ -861,7 +865,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   focusedBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFF4B39EF),
                                                                       width:
@@ -874,7 +878,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   errorBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFFFF5963),
                                                                       width:
@@ -887,7 +891,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   focusedErrorBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFFFF5963),
                                                                       width:
@@ -908,7 +912,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF14181B),
                                                                       fontSize:
                                                                           14.0,
@@ -928,7 +932,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                           Flexible(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           16.0,
@@ -953,7 +957,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xFF57636C),
                                                                         fontSize:
                                                                             14.0,
@@ -968,7 +972,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Plus Jakarta Sans',
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xFF57636C),
                                                                         fontSize:
                                                                             14.0,
@@ -980,7 +984,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   enabledBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFFE0E3E7),
                                                                       width:
@@ -993,7 +997,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   focusedBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFF4B39EF),
                                                                       width:
@@ -1006,7 +1010,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   errorBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFFFF5963),
                                                                       width:
@@ -1019,7 +1023,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                   focusedErrorBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFFFF5963),
                                                                       width:
@@ -1040,7 +1044,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF14181B),
                                                                       fontSize:
                                                                           14.0,
@@ -1061,7 +1065,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     10.0,
@@ -1074,7 +1078,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                             Flexible(
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1088,7 +1092,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                       FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                  options: const [
+                                                                  options: [
                                                                     'Entregado',
                                                                     'No Entregado'
                                                                   ],
@@ -1131,7 +1135,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                       2.0,
                                                                   borderRadius:
                                                                       8.0,
-                                                                  margin: const EdgeInsetsDirectional
+                                                                  margin: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           12.0,
                                                                           0.0,
@@ -1151,7 +1155,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                             Flexible(
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             0.0,
@@ -1165,7 +1169,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                       FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                  options: const [
+                                                                  options: [
                                                                     '-',
                                                                     'No se encontro el Lugar',
                                                                     'No Estaba el Destinatario',
@@ -1210,7 +1214,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                       2.0,
                                                                   borderRadius:
                                                                       8.0,
-                                                                  margin: const EdgeInsetsDirectional
+                                                                  margin: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           12.0,
                                                                           0.0,
@@ -1232,7 +1236,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     10.0,
@@ -1266,16 +1270,16 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                     builder:
                                                                         (alertDialogContext) {
                                                                       return AlertDialog(
-                                                                        title: const Text(
+                                                                        title: Text(
                                                                             'Elegir una Opción de Entrega'),
                                                                         content:
-                                                                            const Text('Debe Elegir una Opción'),
+                                                                            Text('Debe Elegir una Opción'),
                                                                         actions: [
                                                                           TextButton(
                                                                             onPressed: () =>
                                                                                 Navigator.pop(alertDialogContext),
                                                                             child:
-                                                                                const Text('Ok'),
+                                                                                Text('Ok'),
                                                                           ),
                                                                         ],
                                                                       );
@@ -1329,7 +1333,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                               FlutterFlowTheme.of(context).primaryText,
                                                                         ),
                                                                       ),
-                                                                      duration: const Duration(
+                                                                      duration: Duration(
                                                                           milliseconds:
                                                                               4000),
                                                                       backgroundColor:
@@ -1340,11 +1344,12 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
 
                                                                   context
                                                                       .pushNamed(
-                                                                    'PaneldeEntregas',
+                                                                    PaneldeEntregasWidget
+                                                                        .routeName,
                                                                     extra: <String,
                                                                         dynamic>{
                                                                       kTransitionInfoKey:
-                                                                          const TransitionInfo(
+                                                                          TransitionInfo(
                                                                         hasTransition:
                                                                             true,
                                                                         transitionType:
@@ -1398,7 +1403,7 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                           ),
                                                                         ),
                                                                         duration:
-                                                                            const Duration(milliseconds: 4000),
+                                                                            Duration(milliseconds: 4000),
                                                                         backgroundColor:
                                                                             FlutterFlowTheme.of(context).secondary,
                                                                       ),
@@ -1406,11 +1411,12 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
 
                                                                     context
                                                                         .pushNamed(
-                                                                      'PaneldeEntregas',
+                                                                      PaneldeEntregasWidget
+                                                                          .routeName,
                                                                       extra: <String,
                                                                           dynamic>{
                                                                         kTransitionInfoKey:
-                                                                            const TransitionInfo(
+                                                                            TransitionInfo(
                                                                           hasTransition:
                                                                               true,
                                                                           transitionType:
@@ -1426,13 +1432,13 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                                           (alertDialogContext) {
                                                                         return AlertDialog(
                                                                           title:
-                                                                              const Text('Error de Carga'),
+                                                                              Text('Error de Carga'),
                                                                           content:
-                                                                              const Text('No cargo Observaciones'),
+                                                                              Text('No cargo Observaciones'),
                                                                           actions: [
                                                                             TextButton(
                                                                               onPressed: () => Navigator.pop(alertDialogContext),
-                                                                              child: const Text('Ok'),
+                                                                              child: Text('Ok'),
                                                                             ),
                                                                           ],
                                                                         );
@@ -1446,14 +1452,14 @@ class _DetallePanelEntregaWidgetState extends State<DetallePanelEntregaWidget> {
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 40.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         0.0,
                                                                         16.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,

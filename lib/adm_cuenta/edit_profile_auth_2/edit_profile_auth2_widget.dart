@@ -13,8 +13,8 @@ class EditProfileAuth2Widget extends StatefulWidget {
     String? title,
     String? confirmButtonText,
     required this.navigateAction,
-  })  : title = title ?? 'Edit Profile',
-        confirmButtonText = confirmButtonText ?? 'Save Changes';
+  })  : this.title = title ?? 'Edit Profile',
+        this.confirmButtonText = confirmButtonText ?? 'Save Changes';
 
   final String title;
   final String confirmButtonText;
@@ -101,7 +101,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Editar Perfil',
                         style:
@@ -113,7 +113,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 8.0, 0.0, 30.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 8.0, 0.0, 30.0),
                       child: Text(
                         'Edita tu Perfil',
                         style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -123,7 +123,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 12.0, 20.0, 12.0),
                       child: TextFormField(
                         controller: _model.nombreCompletoTextController ??=
@@ -131,7 +131,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                           text: formUsuariosRow?.nombreCompleto,
                         ),
                         focusNode: _model.nombreCompletoFocusNode,
-                        autofillHints: const [AutofillHints.name],
+                        autofillHints: [AutofillHints.name],
                         textCapitalization: TextCapitalization.words,
                         obscureText: false,
                         decoration: InputDecoration(
@@ -184,7 +184,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                           filled: true,
                           fillColor:
                               FlutterFlowTheme.of(context).primaryBackground,
-                          contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                          contentPadding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 12.0, 0.0, 12.0),
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -198,7 +198,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 12.0),
+                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 12.0),
                       child: TextFormField(
                         controller: _model.dniTextController ??=
                             TextEditingController(
@@ -257,7 +257,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                           filled: true,
                           fillColor:
                               FlutterFlowTheme.of(context).primaryBackground,
-                          contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                          contentPadding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 12.0, 0.0, 12.0),
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -274,14 +274,14 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 12.0),
+                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 12.0),
                       child: TextFormField(
                         controller: _model.telefonoTextController ??=
                             TextEditingController(
                           text: formUsuariosRow?.telefono,
                         ),
                         focusNode: _model.telefonoFocusNode,
-                        autofillHints: const [AutofillHints.telephoneNumber],
+                        autofillHints: [AutofillHints.telephoneNumber],
                         textCapitalization: TextCapitalization.none,
                         obscureText: false,
                         decoration: InputDecoration(
@@ -334,7 +334,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                           filled: true,
                           fillColor:
                               FlutterFlowTheme.of(context).primaryBackground,
-                          contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                          contentPadding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 12.0, 0.0, 12.0),
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -352,9 +352,9 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                       children: [
                         Expanded(
                           child: Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 20.0, 0.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
@@ -387,7 +387,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                                               .primaryText,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4000),
+                                      duration: Duration(milliseconds: 4000),
                                       backgroundColor:
                                           FlutterFlowTheme.of(context)
                                               .secondary,
@@ -399,9 +399,9 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                                 options: FFButtonOptions(
                                   width: 500.0,
                                   height: 44.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).accent3,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -411,7 +411,7 @@ class _EditProfileAuth2WidgetState extends State<EditProfileAuth2Widget> {
                                         letterSpacing: 0.0,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),

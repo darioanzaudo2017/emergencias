@@ -3,6 +3,7 @@ import '/componentes/menulateralweb/menulateralweb_widget.dart';
 import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'detalle_asignar_pedido_model.dart';
 export 'detalle_asignar_pedido_model.dart';
@@ -14,6 +15,9 @@ class DetalleAsignarPedidoWidget extends StatefulWidget {
   });
 
   final PedidosRow? idPedido;
+
+  static String routeName = 'detalleAsignarPedido';
+  static String routePath = '/detalleAsignarPedido';
 
   @override
   State<DetalleAsignarPedidoWidget> createState() =>
@@ -117,7 +121,7 @@ class _DetalleAsignarPedidoWidgetState
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -129,7 +133,7 @@ class _DetalleAsignarPedidoWidgetState
               wrapWithModel(
                 model: _model.menulateralwebModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const MenulateralwebWidget(),
+                child: MenulateralwebWidget(),
               ),
               Expanded(
                 child: Container(
@@ -179,18 +183,18 @@ class _DetalleAsignarPedidoWidgetState
                                 return Container(
                                   width: double.infinity,
                                   height: 200.0,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     color: Color(0xFF504AEC),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 24.0, 16.0, 24.0),
                                     child: Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.9,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xCCFFFFFF),
-                                        boxShadow: const [
+                                        color: Color(0xCCFFFFFF),
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 8.0,
                                             color: Color(0x36000000),
@@ -204,7 +208,7 @@ class _DetalleAsignarPedidoWidgetState
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsets.all(12.0),
+                                        padding: EdgeInsets.all(12.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -214,13 +218,13 @@ class _DetalleAsignarPedidoWidgetState
                                                 Card(
                                                   clipBehavior: Clip
                                                       .antiAliasWithSaveLayer,
-                                                  color: const Color(0xFF504AEC),
+                                                  color: Color(0xFF504AEC),
                                                   shape: RoundedRectangleBorder(
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             8.0),
                                                   ),
-                                                  child: const Padding(
+                                                  child: Padding(
                                                     padding:
                                                         EdgeInsets.all(8.0),
                                                     child: Icon(
@@ -231,7 +235,7 @@ class _DetalleAsignarPedidoWidgetState
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -243,7 +247,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -257,7 +261,7 @@ class _DetalleAsignarPedidoWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 24.0,
                                                                 letterSpacing:
@@ -270,7 +274,7 @@ class _DetalleAsignarPedidoWidgetState
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -286,7 +290,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -336,7 +340,7 @@ class _DetalleAsignarPedidoWidgetState
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -352,7 +356,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -403,7 +407,7 @@ class _DetalleAsignarPedidoWidgetState
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -419,7 +423,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -469,7 +473,7 @@ class _DetalleAsignarPedidoWidgetState
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -485,7 +489,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -534,7 +538,7 @@ class _DetalleAsignarPedidoWidgetState
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -550,7 +554,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -603,7 +607,7 @@ class _DetalleAsignarPedidoWidgetState
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           50.0, 0.0, 0.0, 0.0),
                                                   child: InkWell(
@@ -617,7 +621,8 @@ class _DetalleAsignarPedidoWidgetState
                                                         Colors.transparent,
                                                     onTap: () async {
                                                       context.pushNamed(
-                                                        'Asignacion',
+                                                        AsignacionWidget
+                                                            .routeName,
                                                         queryParameters: {
                                                           'idPedido':
                                                               serializeParam(
@@ -629,7 +634,7 @@ class _DetalleAsignarPedidoWidgetState
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              const TransitionInfo(
+                                                              TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -641,7 +646,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     child: Card(
                                                       clipBehavior: Clip
                                                           .antiAliasWithSaveLayer,
-                                                      color: const Color(0xFF44E38C),
+                                                      color: Color(0xFF44E38C),
                                                       shape:
                                                           RoundedRectangleBorder(
                                                         borderRadius:
@@ -654,7 +659,7 @@ class _DetalleAsignarPedidoWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsets.all(
+                                                                EdgeInsets.all(
                                                                     5.0),
                                                             child: Column(
                                                               mainAxisSize:
@@ -709,7 +714,7 @@ class _DetalleAsignarPedidoWidgetState
                             child: Container(
                               width: double.infinity,
                               height: 300.0,
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -719,7 +724,7 @@ class _DetalleAsignarPedidoWidgetState
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 10.0, 16.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -732,7 +737,7 @@ class _DetalleAsignarPedidoWidgetState
                                                         .override(
                                                           fontFamily: 'Outfit',
                                                           color:
-                                                              const Color(0xFF14181B),
+                                                              Color(0xFF14181B),
                                                           fontSize: 24.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -744,7 +749,7 @@ class _DetalleAsignarPedidoWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 16.0),
                                           child: SingleChildScrollView(
                                             child: Column(
@@ -759,7 +764,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     16.0,
@@ -783,7 +788,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -800,7 +805,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -813,7 +818,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -826,7 +831,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -839,7 +844,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -852,7 +857,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -872,7 +877,7 @@ class _DetalleAsignarPedidoWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
@@ -891,7 +896,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -914,7 +919,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -931,7 +936,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -944,7 +949,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -957,7 +962,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -970,7 +975,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -983,7 +988,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1003,7 +1008,7 @@ class _DetalleAsignarPedidoWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
@@ -1022,7 +1027,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1046,7 +1051,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1063,7 +1068,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1076,7 +1081,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1089,7 +1094,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1102,7 +1107,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1115,7 +1120,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1135,7 +1140,7 @@ class _DetalleAsignarPedidoWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
@@ -1154,7 +1159,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1178,7 +1183,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1195,7 +1200,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1208,7 +1213,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1221,7 +1226,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1234,7 +1239,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1247,7 +1252,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1267,7 +1272,7 @@ class _DetalleAsignarPedidoWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
@@ -1292,7 +1297,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     16.0,
@@ -1315,7 +1320,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1333,7 +1338,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1346,7 +1351,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1359,7 +1364,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1372,7 +1377,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1385,7 +1390,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1425,7 +1430,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1449,7 +1454,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1468,7 +1473,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1481,7 +1486,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1494,7 +1499,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1507,7 +1512,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1520,7 +1525,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1560,7 +1565,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1584,7 +1589,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1601,7 +1606,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1614,7 +1619,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1627,7 +1632,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1640,7 +1645,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1653,7 +1658,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1673,7 +1678,7 @@ class _DetalleAsignarPedidoWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
@@ -1698,7 +1703,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     16.0,
@@ -1722,7 +1727,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1741,7 +1746,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1754,7 +1759,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1767,7 +1772,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1780,7 +1785,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1793,7 +1798,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1833,7 +1838,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1857,7 +1862,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1876,7 +1881,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1889,7 +1894,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1902,7 +1907,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1915,7 +1920,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1928,7 +1933,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1968,7 +1973,7 @@ class _DetalleAsignarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1992,7 +1997,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -2011,7 +2016,7 @@ class _DetalleAsignarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -2024,7 +2029,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -2037,7 +2042,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -2050,7 +2055,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -2063,7 +2068,7 @@ class _DetalleAsignarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -2110,7 +2115,7 @@ class _DetalleAsignarPedidoWidgetState
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   16.0,

@@ -2,12 +2,16 @@ import '/backend/supabase/supabase.dart';
 import '/componentes/menulateralweb/menulateralweb_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'listade_usuarios_model.dart';
 export 'listade_usuarios_model.dart';
 
 class ListadeUsuariosWidget extends StatefulWidget {
   const ListadeUsuariosWidget({super.key});
+
+  static String routeName = 'ListadeUsuarios';
+  static String routePath = '/ListaUsuarios';
 
   @override
   State<ListadeUsuariosWidget> createState() => _ListadeUsuariosWidgetState();
@@ -77,7 +81,7 @@ class _ListadeUsuariosWidgetState extends State<ListadeUsuariosWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -89,13 +93,13 @@ class _ListadeUsuariosWidgetState extends State<ListadeUsuariosWidget> {
                   wrapWithModel(
                     model: _model.menulateralwebModel,
                     updateCallback: () => safeSetState(() {}),
-                    child: const MenulateralwebWidget(),
+                    child: MenulateralwebWidget(),
                   ),
                   Expanded(
                     child: Container(
                       width: double.infinity,
                       height: double.infinity,
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxWidth: 970.0,
                       ),
                       decoration: BoxDecoration(
@@ -105,7 +109,7 @@ class _ListadeUsuariosWidgetState extends State<ListadeUsuariosWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 5.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -149,7 +153,7 @@ class _ListadeUsuariosWidgetState extends State<ListadeUsuariosWidget> {
                                         listaUsuariosSinAsignar[
                                             listaUsuariosSinAsignarIndex];
                                     return Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -158,7 +162,7 @@ class _ListadeUsuariosWidgetState extends State<ListadeUsuariosWidget> {
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
                                           context.pushNamed(
-                                            'DetalleRol',
+                                            DetalleRolWidget.routeName,
                                             queryParameters: {
                                               'idUsuario': serializeParam(
                                                 listaUsuariosSinAsignarItem,
@@ -174,7 +178,7 @@ class _ListadeUsuariosWidgetState extends State<ListadeUsuariosWidget> {
                                                 .secondaryBackground,
                                           ),
                                           child: Padding(
-                                            padding: const EdgeInsets.all(12.0),
+                                            padding: EdgeInsets.all(12.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:

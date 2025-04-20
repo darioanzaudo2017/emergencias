@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'cargar_articulos_model.dart';
@@ -19,6 +20,9 @@ class CargarArticulosWidget extends StatefulWidget {
 
   final PedidosRow? detallePedido;
   final PersonasRow? detallePersona;
+
+  static String routeName = 'CargarArticulos';
+  static String routePath = '/cargarArticulos';
 
   @override
   State<CargarArticulosWidget> createState() => _CargarArticulosWidgetState();
@@ -70,7 +74,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -100,11 +104,11 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                               Expanded(
                                 child: Container(
                                   width: double.infinity,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     color: Color(0xFFEFCD39),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 24.0, 16.0, 24.0),
                                     child: Container(
                                       width: MediaQuery.sizeOf(context).width *
@@ -112,7 +116,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 8.0,
                                             color: Color(0x36000000),
@@ -126,7 +130,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsets.all(12.0),
+                                        padding: EdgeInsets.all(12.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -136,13 +140,13 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                 Card(
                                                   clipBehavior: Clip
                                                       .antiAliasWithSaveLayer,
-                                                  color: const Color(0xFFEFC439),
+                                                  color: Color(0xFFEFC439),
                                                   shape: RoundedRectangleBorder(
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             8.0),
                                                   ),
-                                                  child: const Padding(
+                                                  child: Padding(
                                                     padding:
                                                         EdgeInsets.all(8.0),
                                                     child: Icon(
@@ -155,7 +159,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Column(
@@ -167,7 +171,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -181,7 +185,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Outfit',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF14181B),
                                                                   fontSize:
                                                                       24.0,
@@ -195,7 +199,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -212,7 +216,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -263,7 +267,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -280,7 +284,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -331,7 +335,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -348,7 +352,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -399,7 +403,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -416,7 +420,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -467,7 +471,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -484,7 +488,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -535,7 +539,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -552,7 +556,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -619,7 +623,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 10.0, 16.0, 15.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -627,7 +631,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                               children: [
                                 Flexible(
                                   child: Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                     child: Text(
                                       'Cargar Artículos',
                                       textAlign: TextAlign.start,
@@ -635,7 +639,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                           .headlineMedium
                                           .override(
                                             fontFamily: 'Outfit',
-                                            color: const Color(0xFF14181B),
+                                            color: Color(0xFF14181B),
                                             fontSize: 24.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
@@ -689,7 +693,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 10.0, 16.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -697,7 +701,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                 Flexible(
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 5.0, 0.0),
                                                     child: FlutterFlowDropDown<
@@ -753,7 +757,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                       borderWidth: 2.0,
                                                       borderRadius: 8.0,
                                                       margin:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   12.0,
                                                                   0.0,
@@ -769,7 +773,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                 Flexible(
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(5.0, 0.0,
                                                                 5.0, 0.0),
                                                     child: FlutterFlowDropDown<
@@ -828,7 +832,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                       borderWidth: 2.0,
                                                       borderRadius: 8.0,
                                                       margin:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   12.0,
                                                                   0.0,
@@ -844,7 +848,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                 Flexible(
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(5.0, 0.0,
                                                                 5.0, 0.0),
                                                     child: TextFormField(
@@ -863,7 +867,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF14181B),
                                                                   fontSize:
                                                                       14.0,
@@ -881,7 +885,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF14181B),
                                                                   fontSize:
                                                                       14.0,
@@ -894,7 +898,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFFE0E3E7),
                                                             width: 2.0,
@@ -907,7 +911,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFF4B39EF),
                                                             width: 2.0,
@@ -920,7 +924,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         errorBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFFFF5963),
                                                             width: 2.0,
@@ -933,7 +937,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         focusedErrorBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFFFF5963),
                                                             width: 2.0,
@@ -972,7 +976,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                 Flexible(
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(5.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: TextFormField(
@@ -992,7 +996,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF14181B),
                                                                   fontSize:
                                                                       14.0,
@@ -1011,7 +1015,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF14181B),
                                                                   fontSize:
                                                                       14.0,
@@ -1024,7 +1028,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFFE0E3E7),
                                                             width: 2.0,
@@ -1037,7 +1041,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFF4B39EF),
                                                             width: 2.0,
@@ -1050,7 +1054,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         errorBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFFFF5963),
                                                             width: 2.0,
@@ -1063,7 +1067,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                         focusedErrorBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Color(
                                                                 0xFFFF5963),
                                                             width: 2.0,
@@ -1082,7 +1086,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'Plus Jakarta Sans',
-                                                            color: const Color(
+                                                            color: Color(
                                                                 0xFF14181B),
                                                             fontSize: 14.0,
                                                             letterSpacing: 0.0,
@@ -1101,7 +1105,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -1110,7 +1114,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: FFButtonWidget(
                                                     onPressed: () async {
@@ -1130,16 +1134,16 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                           builder:
                                                               (alertDialogContext) {
                                                             return AlertDialog(
-                                                              title: const Text(
+                                                              title: Text(
                                                                   'Carga Incorrecta'),
-                                                              content: const Text(
+                                                              content: Text(
                                                                   'Debe Cargar un Rubro'),
                                                               actions: [
                                                                 TextButton(
                                                                   onPressed: () =>
                                                                       Navigator.pop(
                                                                           alertDialogContext),
-                                                                  child: const Text(
+                                                                  child: Text(
                                                                       'Ok'),
                                                                 ),
                                                               ],
@@ -1156,16 +1160,16 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                           builder:
                                                               (alertDialogContext) {
                                                             return AlertDialog(
-                                                              title: const Text(
+                                                              title: Text(
                                                                   'Carga Incorrecta'),
-                                                              content: const Text(
+                                                              content: Text(
                                                                   'Debe Cargar una Necesidad'),
                                                               actions: [
                                                                 TextButton(
                                                                   onPressed: () =>
                                                                       Navigator.pop(
                                                                           alertDialogContext),
-                                                                  child: const Text(
+                                                                  child: Text(
                                                                       'Ok'),
                                                                 ),
                                                               ],
@@ -1216,14 +1220,14 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                       width: 270.0,
                                                       height: 50.0,
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
                                                                   0.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1250,7 +1254,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                         .w500,
                                                               ),
                                                       elevation: 3.0,
-                                                      borderSide: const BorderSide(
+                                                      borderSide: BorderSide(
                                                         color:
                                                             Colors.transparent,
                                                         width: 1.0,
@@ -1273,7 +1277,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -1580,7 +1584,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                           .primaryText,
                                                                     ),
                                                                   ),
-                                                                  duration: const Duration(
+                                                                  duration: Duration(
                                                                       milliseconds:
                                                                           4000),
                                                                   backgroundColor:
@@ -1600,14 +1604,14 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                                                 FFButtonOptions(
                                                               height: 40.0,
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -1679,7 +1683,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
                                     if (_model.contadorGuardar! > 0) {
@@ -1695,27 +1699,28 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                             ),
                                           ),
                                           duration:
-                                              const Duration(milliseconds: 4000),
+                                              Duration(milliseconds: 4000),
                                           backgroundColor:
                                               FlutterFlowTheme.of(context)
                                                   .secondary,
                                         ),
                                       );
 
-                                      context.pushNamed('Solicitudes');
+                                      context.pushNamed(
+                                          SolicitudesWidget.routeName);
                                     } else {
                                       await showDialog(
                                         context: context,
                                         builder: (alertDialogContext) {
                                           return AlertDialog(
-                                            title: const Text('Error de Carga'),
-                                            content: const Text(
+                                            title: Text('Error de Carga'),
+                                            content: Text(
                                                 'Al Menos debe cargar una Necesidad'),
                                             actions: [
                                               TextButton(
                                                 onPressed: () => Navigator.pop(
                                                     alertDialogContext),
-                                                child: const Text('Ok'),
+                                                child: Text('Ok'),
                                               ),
                                             ],
                                           );
@@ -1727,9 +1732,9 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                   options: FFButtonOptions(
                                     width: 270.0,
                                     height: 50.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).accent3,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -1742,7 +1747,7 @@ class _CargarArticulosWidgetState extends State<CargarArticulosWidget> {
                                           fontWeight: FontWeight.w500,
                                         ),
                                     elevation: 3.0,
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),

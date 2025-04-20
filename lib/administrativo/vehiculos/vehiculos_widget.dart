@@ -4,12 +4,16 @@ import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'vehiculos_model.dart';
 export 'vehiculos_model.dart';
 
 class VehiculosWidget extends StatefulWidget {
   const VehiculosWidget({super.key});
+
+  static String routeName = 'Vehiculos';
+  static String routePath = '/vehiculos';
 
   @override
   State<VehiculosWidget> createState() => _VehiculosWidgetState();
@@ -70,13 +74,13 @@ class _VehiculosWidgetState extends State<VehiculosWidget> {
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             floatingActionButton: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(10.0),
               child: FloatingActionButton(
                 onPressed: () async {
                   context.pushNamed(
-                    'NuevoVehiculo',
+                    NuevoVehiculoWidget.routeName,
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: const TransitionInfo(
+                      kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.leftToRight,
                       ),
@@ -102,7 +106,7 @@ class _VehiculosWidgetState extends State<VehiculosWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -114,7 +118,7 @@ class _VehiculosWidgetState extends State<VehiculosWidget> {
                   wrapWithModel(
                     model: _model.menulateralwebModel,
                     updateCallback: () => safeSetState(() {}),
-                    child: const MenulateralwebWidget(),
+                    child: MenulateralwebWidget(),
                   ),
                   Expanded(
                     child: Container(
@@ -131,7 +135,7 @@ class _VehiculosWidgetState extends State<VehiculosWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Text(
                                   'Vehículos Disponibles',
@@ -151,7 +155,7 @@ class _VehiculosWidgetState extends State<VehiculosWidget> {
                             children: [
                               Expanded(
                                 child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
+                                  padding: EdgeInsets.all(10.0),
                                   child: Container(
                                     width: 300.0,
                                     height: 650.0,
@@ -160,7 +164,7 @@ class _VehiculosWidgetState extends State<VehiculosWidget> {
                                           .secondaryBackground,
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsets.all(10.0),
+                                      padding: EdgeInsets.all(10.0),
                                       child: Builder(
                                         builder: (context) {
                                           final listavehiculos =
@@ -376,7 +380,7 @@ class _VehiculosWidgetState extends State<VehiculosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -386,7 +390,8 @@ class _VehiculosWidgetState extends State<VehiculosWidget> {
                                                             onPressed:
                                                                 () async {
                                                               context.pushNamed(
-                                                                'EditarVehiculo',
+                                                                EditarVehiculoWidget
+                                                                    .routeName,
                                                                 queryParameters:
                                                                     {
                                                                   'editarVehiculo':
@@ -399,7 +404,7 @@ class _VehiculosWidgetState extends State<VehiculosWidget> {
                                                                 extra: <String,
                                                                     dynamic>{
                                                                   kTransitionInfoKey:
-                                                                      const TransitionInfo(
+                                                                      TransitionInfo(
                                                                     hasTransition:
                                                                         true,
                                                                     transitionType:
@@ -414,14 +419,14 @@ class _VehiculosWidgetState extends State<VehiculosWidget> {
                                                                 FFButtonOptions(
                                                               height: 40.0,
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,

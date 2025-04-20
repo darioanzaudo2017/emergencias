@@ -18,6 +18,9 @@ class EditarPersonaWidget extends StatefulWidget {
 
   final PersonasRow? editarpersona;
 
+  static String routeName = 'EditarPersona';
+  static String routePath = '/editarPersona';
+
   @override
   State<EditarPersonaWidget> createState() => _EditarPersonaWidgetState();
 }
@@ -83,7 +86,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -93,11 +96,11 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
             wrapWithModel(
               model: _model.menulateralwebModel,
               updateCallback: () => safeSetState(() {}),
-              child: const MenulateralwebWidget(),
+              child: MenulateralwebWidget(),
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(10.0),
                 child: Container(
                   width: double.infinity,
                   height: double.infinity,
@@ -126,17 +129,17 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.85, -0.4),
+                                    alignment: AlignmentDirectional(0.85, -0.4),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 50.0, 0.0, 0.0),
                                       child: FlutterFlowIconButton(
                                         borderColor: Colors.transparent,
                                         borderRadius: 30.0,
                                         borderWidth: 1.0,
                                         buttonSize: 40.0,
-                                        fillColor: const Color(0x7F0F1113),
-                                        icon: const Icon(
+                                        fillColor: Color(0x7F0F1113),
+                                        icon: Icon(
                                           Icons.close_rounded,
                                           color: Colors.white,
                                           size: 20.0,
@@ -150,7 +153,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                 ],
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 16.0, 24.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -163,7 +166,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        offset: const Offset(
+                                        offset: Offset(
                                           0.0,
                                           1.0,
                                         ),
@@ -175,7 +178,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Expanded(
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 200.0,
                                           child: TextFormField(
                                             controller:
@@ -215,7 +218,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -268,7 +271,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 1.0, 24.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -281,7 +284,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        offset: const Offset(
+                                        offset: Offset(
                                           0.0,
                                           1.0,
                                         ),
@@ -293,7 +296,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Expanded(
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 200.0,
                                           child: TextFormField(
                                             controller:
@@ -332,7 +335,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -386,7 +389,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 1.0, 24.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -399,7 +402,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        offset: const Offset(
+                                        offset: Offset(
                                           0.0,
                                           1.0,
                                         ),
@@ -411,7 +414,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Expanded(
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 200.0,
                                           child: TextFormField(
                                             controller: _model
@@ -451,7 +454,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -504,7 +507,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 1.0, 24.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -517,7 +520,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        offset: const Offset(
+                                        offset: Offset(
                                           0.0,
                                           1.0,
                                         ),
@@ -531,7 +534,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                       Flexible(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: FlutterFlowDropDown<String>(
                                             controller: _model
@@ -540,7 +543,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                               _model.dropGeneroValue ??=
                                                   widget.editarpersona?.genero,
                                             ),
-                                            options: const [
+                                            options: [
                                               'Mujer',
                                               'Varón',
                                               'Mujer Trans',
@@ -580,7 +583,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                             borderWidth: 2.0,
                                             borderRadius: 8.0,
                                             margin:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 12.0, 0.0),
                                             hidesUnderline: true,
                                             isOverButton: false,
@@ -594,7 +597,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     24.0, 1.0, 24.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -607,7 +610,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                         blurRadius: 0.0,
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
-                                        offset: const Offset(
+                                        offset: Offset(
                                           0.0,
                                           1.0,
                                         ),
@@ -632,15 +635,15 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                               builder: (alertDialogContext) {
                                                 return AlertDialog(
                                                   title:
-                                                      const Text('Carga Incorrecta'),
-                                                  content: const Text(
+                                                      Text('Carga Incorrecta'),
+                                                  content: Text(
                                                       'Debe cargar el Género'),
                                                   actions: [
                                                     TextButton(
                                                       onPressed: () =>
                                                           Navigator.pop(
                                                               alertDialogContext),
-                                                      child: const Text('Ok'),
+                                                      child: Text('Ok'),
                                                     ),
                                                   ],
                                                 );
@@ -678,7 +681,7 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                                 ),
                                               ),
                                               duration:
-                                                  const Duration(milliseconds: 4000),
+                                                  Duration(milliseconds: 4000),
                                               backgroundColor:
                                                   FlutterFlowTheme.of(context)
                                                       .secondary,
@@ -690,10 +693,10 @@ class _EditarPersonaWidgetState extends State<EditarPersonaWidget> {
                                         options: FFButtonOptions(
                                           height: 40.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .accent3,

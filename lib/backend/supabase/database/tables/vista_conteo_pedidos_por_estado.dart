@@ -11,7 +11,7 @@ class VistaConteoPedidosPorEstadoTable
 }
 
 class VistaConteoPedidosPorEstadoRow extends SupabaseDataRow {
-  VistaConteoPedidosPorEstadoRow(super.data);
+  VistaConteoPedidosPorEstadoRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => VistaConteoPedidosPorEstadoTable();
