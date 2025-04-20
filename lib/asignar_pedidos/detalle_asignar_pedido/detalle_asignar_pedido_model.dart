@@ -2,6 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/componentes/menulateralweb/menulateralweb_widget.dart';
 import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'detalle_asignar_pedido_widget.dart' show DetalleAsignarPedidoWidget;
 import 'package:flutter/material.dart';
 

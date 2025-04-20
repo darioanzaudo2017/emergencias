@@ -1,5 +1,4 @@
 import '/auth/supabase_auth/auth_util.dart';
-import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -7,6 +6,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'pedido_nuevo_model.dart';
 export 'pedido_nuevo_model.dart';
@@ -15,9 +15,16 @@ class PedidoNuevoWidget extends StatefulWidget {
   const PedidoNuevoWidget({
     super.key,
     required this.personaNueva,
+    required this.passDir,
+    required this.passCoo,
   });
 
   final PersonasRow? personaNueva;
+  final String? passDir;
+  final String? passCoo;
+
+  static String routeName = 'PedidoNuevo';
+  static String routePath = '/pedidoNuevo';
 
   @override
   State<PedidoNuevoWidget> createState() => _PedidoNuevoWidgetState();
@@ -54,8 +61,13 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
     ));
     _model.textTelefonoFocusNode ??= FocusNode();
 
-    _model.textDireccionTextController ??= TextEditingController();
+    _model.textDireccionTextController ??=
+        TextEditingController(text: widget.passDir);
     _model.textDireccionFocusNode ??= FocusNode();
+
+    _model.textCoordenadasTextController ??=
+        TextEditingController(text: widget.passCoo);
+    _model.textCoordenadasFocusNode ??= FocusNode();
 
     _model.switchDiscaValue = true;
     _model.textObsTextController ??= TextEditingController();
@@ -130,7 +142,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                     letterSpacing: 0.0,
                   ),
             ),
-            actions: const [],
+            actions: [],
             centerTitle: false,
             elevation: 0.0,
           ),
@@ -182,7 +194,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                     color: FlutterFlowTheme.of(context).primary,
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 24.0, 16.0, 24.0),
                                     child: Container(
                                       width: MediaQuery.sizeOf(context).width *
@@ -190,7 +202,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: const [
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 8.0,
                                             color: Color(0x36000000),
@@ -204,7 +216,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsets.all(12.0),
+                                        padding: EdgeInsets.all(12.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -222,7 +234,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                         BorderRadius.circular(
                                                             8.0),
                                                   ),
-                                                  child: const Padding(
+                                                  child: Padding(
                                                     padding:
                                                         EdgeInsets.all(8.0),
                                                     child: Icon(
@@ -235,7 +247,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Column(
@@ -247,7 +259,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -261,7 +273,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Outfit',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF14181B),
                                                                   fontSize:
                                                                       24.0,
@@ -275,7 +287,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -292,7 +304,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -342,7 +354,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -359,7 +371,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -410,7 +422,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -427,7 +439,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -472,7 +484,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -489,7 +501,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -553,7 +565,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 24.0, 16.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -564,7 +576,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                       .headlineMedium
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF14181B),
+                                        color: Color(0xFF14181B),
                                         fontSize: 24.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.normal,
@@ -574,7 +586,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -618,7 +630,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                         Expanded(
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 16.0, 5.0, 0.0),
                                             child: TextFormField(
                                               controller: _model
@@ -636,7 +648,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF14181B),
+                                                              Color(0xFF14181B),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -649,7 +661,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              Color(0xFF57636C),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -657,7 +669,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                         ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFFE0E3E7),
                                                     width: 2.0,
                                                   ),
@@ -667,7 +679,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFF4B39EF),
                                                     width: 2.0,
                                                   ),
@@ -676,7 +688,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           8.0),
                                                 ),
                                                 errorBorder: OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -686,7 +698,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                 ),
                                                 focusedErrorBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -704,7 +716,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF14181B),
+                                                            Color(0xFF14181B),
                                                         fontSize: 14.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -719,7 +731,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                         Expanded(
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 16.0, 5.0, 0.0),
                                             child: TextFormField(
                                               controller:
@@ -737,7 +749,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF14181B),
+                                                              Color(0xFF14181B),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -750,7 +762,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              Color(0xFF57636C),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -758,7 +770,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                         ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFFE0E3E7),
                                                     width: 2.0,
                                                   ),
@@ -768,7 +780,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFF4B39EF),
                                                     width: 2.0,
                                                   ),
@@ -777,7 +789,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           8.0),
                                                 ),
                                                 errorBorder: OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -787,7 +799,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                 ),
                                                 focusedErrorBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -805,7 +817,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF14181B),
+                                                            Color(0xFF14181B),
                                                         fontSize: 14.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -820,7 +832,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                         Expanded(
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 16.0, 0.0, 0.0),
                                             child: TextFormField(
                                               controller: _model
@@ -838,7 +850,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF14181B),
+                                                              Color(0xFF14181B),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -851,7 +863,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              const Color(0xFF57636C),
+                                                              Color(0xFF57636C),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -859,7 +871,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                         ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFFE0E3E7),
                                                     width: 2.0,
                                                   ),
@@ -869,7 +881,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFF4B39EF),
                                                     width: 2.0,
                                                   ),
@@ -878,7 +890,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                           8.0),
                                                 ),
                                                 errorBorder: OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -888,7 +900,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                 ),
                                                 focusedErrorBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -906,7 +918,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF14181B),
+                                                            Color(0xFF14181B),
                                                         fontSize: 14.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -927,7 +939,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 16.0, 5.0, 0.0),
                                         child: FlutterFlowDropDown<String>(
                                           controller: _model
@@ -947,7 +959,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: const Color(0xFF14181B),
+                                                    color: Color(0xFF14181B),
                                                     letterSpacing: 0.0,
                                                   ),
                                           searchTextStyle:
@@ -962,7 +974,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: const Color(0xFF14181B),
+                                                    color: Color(0xFF14181B),
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintText: 'Sellecione un Barrio',
@@ -983,7 +995,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                           borderWidth: 2.0,
                                           borderRadius: 8.0,
                                           margin:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           hidesUnderline: true,
                                           isOverButton: false,
@@ -994,7 +1006,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 16.0, 5.0, 0.0),
                                         child: TextFormField(
                                           controller: _model
@@ -1010,7 +1022,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                     .override(
                                                       fontFamily:
                                                           'Plus Jakarta Sans',
-                                                      color: const Color(0xFF57636C),
+                                                      color: Color(0xFF57636C),
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -1023,14 +1035,14 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                     .override(
                                                       fontFamily:
                                                           'Plus Jakarta Sans',
-                                                      color: const Color(0xFF14181B),
+                                                      color: Color(0xFF14181B),
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFE0E3E7),
                                                 width: 2.0,
                                               ),
@@ -1038,7 +1050,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFF4B39EF),
                                                 width: 2.0,
                                               ),
@@ -1046,7 +1058,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             errorBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFFF5963),
                                                 width: 2.0,
                                               ),
@@ -1055,7 +1067,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                             ),
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFFF5963),
                                                 width: 2.0,
                                               ),
@@ -1069,7 +1081,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF14181B),
+                                                color: Color(0xFF14181B),
                                                 fontSize: 14.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.normal,
@@ -1082,75 +1094,125 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            5.0, 16.0, 5.0, 0.0),
+                                        child: TextFormField(
+                                          controller: _model
+                                              .textCoordenadasTextController,
+                                          focusNode:
+                                              _model.textCoordenadasFocusNode,
+                                          obscureText: false,
+                                          decoration: InputDecoration(
+                                            labelText: 'Coordenadas',
+                                            labelStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Plus Jakarta Sans',
+                                                      color: Color(0xFF57636C),
+                                                      fontSize: 14.0,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                    ),
+                                            hintText: 'Coordenadas',
+                                            hintStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          'Plus Jakarta Sans',
+                                                      color: Color(0xFF14181B),
+                                                      fontSize: 14.0,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.normal,
+                                                    ),
+                                            enabledBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color: Color(0xFFE0E3E7),
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color: Color(0xFF4B39EF),
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                            ),
+                                            errorBorder: OutlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color: Color(0xFFFF5963),
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                            ),
+                                            focusedErrorBorder:
+                                                OutlineInputBorder(
+                                              borderSide: BorderSide(
+                                                color: Color(0xFFFF5963),
+                                                width: 2.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                            ),
+                                            filled: true,
+                                            fillColor: Colors.white,
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Plus Jakarta Sans',
+                                                color: Color(0xFF14181B),
+                                                fontSize: 14.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.normal,
+                                              ),
+                                          validator: _model
+                                              .textCoordenadasTextControllerValidator
+                                              .asValidator(context),
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 16.0, 5.0, 0.0),
                                         child: FFButtonWidget(
                                           onPressed: () async {
-                                            _model.toke =
-                                                await PedirtokencatastroCall
-                                                    .call();
-
-                                            _model.apiResultzg3 =
-                                                await DireccionCatastroCall
-                                                    .call(
-                                              token:
-                                                  PedirtokencatastroCall.token(
-                                                (_model.toke?.jsonBody ?? ''),
-                                              ),
-                                              calle:
-                                                  '${_model.textDireccionTextController.text} - ${_model.dropDownBarriosValue}',
+                                            context.pushNamed(
+                                              MapsWidget.routeName,
+                                              queryParameters: {
+                                                'idPersonaMaps': serializeParam(
+                                                  widget.personaNueva,
+                                                  ParamType.SupabaseRow,
+                                                ),
+                                              }.withoutNulls,
+                                              extra: <String, dynamic>{
+                                                kTransitionInfoKey:
+                                                    TransitionInfo(
+                                                  hasTransition: true,
+                                                  transitionType:
+                                                      PageTransitionType
+                                                          .bottomToTop,
+                                                ),
+                                              },
                                             );
-
-                                            if ((_model
-                                                    .apiResultzg3?.succeeded ??
-                                                true)) {
-                                              await showDialog(
-                                                context: context,
-                                                builder: (alertDialogContext) {
-                                                  return AlertDialog(
-                                                    title:
-                                                        const Text('salida de api'),
-                                                    content: Text(
-                                                        '${DireccionCatastroCall.direccioncompleta(
-                                                      (_model.apiResultzg3
-                                                              ?.jsonBody ??
-                                                          ''),
-                                                    )?.firstOrNull}${DireccionCatastroCall.reloid(
-                                                      (_model.apiResultzg3
-                                                              ?.jsonBody ??
-                                                          ''),
-                                                    )?.firstOrNull?.toString()}${DireccionCatastroCall.numeracion(
-                                                      (_model.apiResultzg3
-                                                              ?.jsonBody ??
-                                                          ''),
-                                                    )?.firstOrNull?.toString()}${DireccionCatastroCall.idunidad(
-                                                      (_model.apiResultzg3
-                                                              ?.jsonBody ??
-                                                          ''),
-                                                    )?.firstOrNull?.toString()}'),
-                                                    actions: [
-                                                      TextButton(
-                                                        onPressed: () =>
-                                                            Navigator.pop(
-                                                                alertDialogContext),
-                                                        child: const Text('Ok'),
-                                                      ),
-                                                    ],
-                                                  );
-                                                },
-                                              );
-                                            }
-
-                                            safeSetState(() {});
                                           },
                                           text: 'Cargar Coordenadas',
                                           options: FFButtonOptions(
                                             height: 40.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 0.0, 16.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
@@ -1176,7 +1238,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 16.0, 20.0, 0.0),
                                       child: Text(
                                         'Persona con Discapacidad?',
@@ -1189,7 +1251,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(5.0),
+                                      padding: EdgeInsets.all(5.0),
                                       child: Switch.adaptive(
                                         value: _model.switchDiscaValue!,
                                         onChanged: (newValue) async {
@@ -1220,7 +1282,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                         controller: _model
                                                 .dropDownProceValueController ??=
                                             FormFieldController<String>(null),
-                                        options: const [
+                                        options: [
                                           'Redes Sociales',
                                           'Copa de leche/Comedores',
                                           'Particulares',
@@ -1240,11 +1302,11 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: const Color(0xFF14181B),
+                                              color: Color(0xFF14181B),
                                               letterSpacing: 0.0,
                                             ),
                                         hintText: 'Procedencia del Pedido',
-                                        icon: const Icon(
+                                        icon: Icon(
                                           Icons.keyboard_arrow_down_rounded,
                                           color: Color(0xFF14181B),
                                           size: 24.0,
@@ -1257,7 +1319,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                 .alternate,
                                         borderWidth: 2.0,
                                         borderRadius: 8.0,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                        margin: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         hidesUnderline: true,
                                         isOverButton: false,
@@ -1272,7 +1334,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 16.0, 0.0, 0.0),
                                         child: TextFormField(
                                           controller:
@@ -1287,7 +1349,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                     .override(
                                                       fontFamily:
                                                           'Plus Jakarta Sans',
-                                                      color: const Color(0xFF14181B),
+                                                      color: Color(0xFF14181B),
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -1300,14 +1362,14 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                     .override(
                                                       fontFamily:
                                                           'Plus Jakarta Sans',
-                                                      color: const Color(0xFF14181B),
+                                                      color: Color(0xFF14181B),
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.normal,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFE0E3E7),
                                                 width: 2.0,
                                               ),
@@ -1315,7 +1377,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFF4B39EF),
                                                 width: 2.0,
                                               ),
@@ -1323,7 +1385,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             errorBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFFF5963),
                                                 width: 2.0,
                                               ),
@@ -1332,7 +1394,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                             ),
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFFF5963),
                                                 width: 2.0,
                                               ),
@@ -1366,13 +1428,13 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 16.0, 0.0, 16.0),
                                         child: FlutterFlowDropDown<String>(
                                           controller: _model
                                                   .dropDownSubSecreValueController ??=
                                               FormFieldController<String>(null),
-                                          options: const [
+                                          options: [
                                             'Subsecretaría de Nuevas Economías',
                                             'Subsecretaría de Emergencia e Intervención Territorial',
                                             'Subsecretaría de Familias y Desarrollo Comunitario',
@@ -1390,12 +1452,12 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: const Color(0xFF14181B),
+                                                    color: Color(0xFF14181B),
                                                     letterSpacing: 0.0,
                                                   ),
                                           hintText:
                                               'Subsecretaria que recibio la Demanda',
-                                          icon: const Icon(
+                                          icon: Icon(
                                             Icons.keyboard_arrow_down_rounded,
                                             color: Color(0xFF14181B),
                                             size: 24.0,
@@ -1410,7 +1472,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                           borderWidth: 2.0,
                                           borderRadius: 8.0,
                                           margin:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 12.0, 0.0),
                                           hidesUnderline: true,
                                           isOverButton: false,
@@ -1439,15 +1501,15 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                             context: context,
                                             builder: (alertDialogContext) {
                                               return AlertDialog(
-                                                title: const Text('Carga Nula'),
-                                                content: const Text(
+                                                title: Text('Carga Nula'),
+                                                content: Text(
                                                     'Debe Cargar el Barrio'),
                                                 actions: [
                                                   TextButton(
                                                     onPressed: () =>
                                                         Navigator.pop(
                                                             alertDialogContext),
-                                                    child: const Text('Ok'),
+                                                    child: Text('Ok'),
                                                   ),
                                                 ],
                                               );
@@ -1460,15 +1522,15 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                             context: context,
                                             builder: (alertDialogContext) {
                                               return AlertDialog(
-                                                title: const Text('Carga Incorrecta'),
-                                                content: const Text(
+                                                title: Text('Carga Incorrecta'),
+                                                content: Text(
                                                     'No cargo la Procedencia de la Solicitud'),
                                                 actions: [
                                                   TextButton(
                                                     onPressed: () =>
                                                         Navigator.pop(
                                                             alertDialogContext),
-                                                    child: const Text('Ok'),
+                                                    child: Text('Ok'),
                                                   ),
                                                 ],
                                               );
@@ -1482,15 +1544,15 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                             context: context,
                                             builder: (alertDialogContext) {
                                               return AlertDialog(
-                                                title: const Text('Carga Incorrecta'),
-                                                content: const Text(
+                                                title: Text('Carga Incorrecta'),
+                                                content: Text(
                                                     'No Cargo la Subsecretaria'),
                                                 actions: [
                                                   TextButton(
                                                     onPressed: () =>
                                                         Navigator.pop(
                                                             alertDialogContext),
-                                                    child: const Text('Ok'),
+                                                    child: Text('Ok'),
                                                   ),
                                                 ],
                                               );
@@ -1528,6 +1590,9 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                           'idPersona': widget.personaNueva?.id,
                                           'idUsuario':
                                               pedidoNuevoUsuariosRow?.id,
+                                          'coordenadas': _model
+                                              .textCoordenadasTextController
+                                              .text,
                                         });
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(
@@ -1541,7 +1606,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                               ),
                                             ),
                                             duration:
-                                                const Duration(milliseconds: 4000),
+                                                Duration(milliseconds: 4000),
                                             backgroundColor:
                                                 FlutterFlowTheme.of(context)
                                                     .secondary,
@@ -1549,7 +1614,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                         );
 
                                         context.pushNamed(
-                                          'CargarArticulos',
+                                          CargarArticulosWidget.routeName,
                                           queryParameters: {
                                             'detallePersona': serializeParam(
                                               widget.personaNueva,
@@ -1568,10 +1633,10 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                       options: FFButtonOptions(
                                         width: 270.0,
                                         height: 50.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .accent3,
@@ -1585,7 +1650,7 @@ class _PedidoNuevoWidgetState extends State<PedidoNuevoWidget> {
                                               fontWeight: FontWeight.w500,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),

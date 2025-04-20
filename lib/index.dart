@@ -64,3 +64,4 @@ export '/historial/historial_pedidos2/historial_pedidos2_widget.dart'
     show HistorialPedidos2Widget;
 export '/historial/ver_pedido_historial/ver_pedido_historial_widget.dart'
     show VerPedidoHistorialWidget;
+export '/solicitudes/maps/maps_widget.dart' show MapsWidget;

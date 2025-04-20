@@ -17,6 +17,9 @@ class DetalleRolWidget extends StatefulWidget {
 
   final UsuariosRow? idUsuario;
 
+  static String routeName = 'DetalleRol';
+  static String routePath = '/detalleRol';
+
   @override
   State<DetalleRolWidget> createState() => _DetalleRolWidgetState();
 }
@@ -61,7 +64,7 @@ class _DetalleRolWidgetState extends State<DetalleRolWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -73,20 +76,20 @@ class _DetalleRolWidgetState extends State<DetalleRolWidget> {
               wrapWithModel(
                 model: _model.menulateralwebModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const MenulateralwebWidget(),
+                child: MenulateralwebWidget(),
               ),
               Expanded(
                 child: Container(
                   width: double.infinity,
                   height: double.infinity,
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 970.0,
                   ),
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                    padding: EdgeInsets.all(12.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -103,7 +106,7 @@ class _DetalleRolWidgetState extends State<DetalleRolWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 16.0, 0.0, 10.0),
                           child: Text(
                             valueOrDefault<String>(
@@ -121,7 +124,7 @@ class _DetalleRolWidgetState extends State<DetalleRolWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 16.0, 0.0, 20.0),
                           child: Text(
                             valueOrDefault<String>(
@@ -158,7 +161,7 @@ class _DetalleRolWidgetState extends State<DetalleRolWidget> {
                                           'Rol',
                                         ),
                                       ),
-                                      options: const [
+                                      options: [
                                         'Solicitante',
                                         'Asignador',
                                         'Administrador',
@@ -188,7 +191,7 @@ class _DetalleRolWidgetState extends State<DetalleRolWidget> {
                                       borderColor: Colors.transparent,
                                       borderWidth: 2.0,
                                       borderRadius: 8.0,
-                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                      margin: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 4.0, 16.0, 4.0),
                                       hidesUnderline: true,
                                       isOverButton: true,
@@ -230,7 +233,7 @@ class _DetalleRolWidgetState extends State<DetalleRolWidget> {
                                             .primaryText,
                                       ),
                                     ),
-                                    duration: const Duration(milliseconds: 4000),
+                                    duration: Duration(milliseconds: 4000),
                                     backgroundColor:
                                         FlutterFlowTheme.of(context).secondary,
                                   ),
@@ -240,9 +243,9 @@ class _DetalleRolWidgetState extends State<DetalleRolWidget> {
                               text: 'Actualizar',
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)

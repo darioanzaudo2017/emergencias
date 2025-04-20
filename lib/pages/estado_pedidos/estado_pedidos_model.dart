@@ -2,6 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/componentes/menulateralweb/menulateralweb_widget.dart';
 import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'estado_pedidos_widget.dart' show EstadoPedidosWidget;
 import 'package:flutter/material.dart';
 

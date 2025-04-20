@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'detalle_autorizar_pedido_model.dart';
@@ -18,6 +19,9 @@ class DetalleAutorizarPedidoWidget extends StatefulWidget {
   });
 
   final PedidosRow? idPedido;
+
+  static String routeName = 'detalleAutorizarPedido';
+  static String routePath = '/detalleAutorizarPedido';
 
   @override
   State<DetalleAutorizarPedidoWidget> createState() =>
@@ -117,7 +121,7 @@ class _DetalleAutorizarPedidoWidgetState
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -129,7 +133,7 @@ class _DetalleAutorizarPedidoWidgetState
               wrapWithModel(
                 model: _model.menulateralwebModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const MenulateralwebWidget(),
+                child: MenulateralwebWidget(),
               ),
               Expanded(
                 child: Container(
@@ -183,14 +187,14 @@ class _DetalleAutorizarPedidoWidgetState
                                     color: FlutterFlowTheme.of(context).warning,
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 24.0, 16.0, 24.0),
                                     child: Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.9,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xCCFFFFFF),
-                                        boxShadow: const [
+                                        color: Color(0xCCFFFFFF),
+                                        boxShadow: [
                                           BoxShadow(
                                             blurRadius: 8.0,
                                             color: Color(0x36000000),
@@ -204,7 +208,7 @@ class _DetalleAutorizarPedidoWidgetState
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsets.all(12.0),
+                                        padding: EdgeInsets.all(12.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -222,7 +226,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                         BorderRadius.circular(
                                                             8.0),
                                                   ),
-                                                  child: const Padding(
+                                                  child: Padding(
                                                     padding:
                                                         EdgeInsets.all(8.0),
                                                     child: Icon(
@@ -233,7 +237,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 0.0, 0.0, 0.0),
                                                   child: Column(
@@ -245,7 +249,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -259,7 +263,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 24.0,
                                                                 letterSpacing:
@@ -272,7 +276,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -288,7 +292,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -338,7 +342,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -354,7 +358,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -405,7 +409,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -421,7 +425,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -471,7 +475,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -487,7 +491,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -536,7 +540,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -552,7 +556,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -605,7 +609,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           50.0, 0.0, 0.0, 0.0),
                                                   child: InkWell(
@@ -645,7 +649,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                   .primaryText,
                                                             ),
                                                           ),
-                                                          duration: const Duration(
+                                                          duration: Duration(
                                                               milliseconds:
                                                                   4000),
                                                           backgroundColor:
@@ -656,11 +660,12 @@ class _DetalleAutorizarPedidoWidgetState
                                                       );
 
                                                       context.pushNamed(
-                                                        'AutorizarPedidos',
+                                                        AutorizarPedidosWidget
+                                                            .routeName,
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:
-                                                              const TransitionInfo(
+                                                              TransitionInfo(
                                                             hasTransition: true,
                                                             transitionType:
                                                                 PageTransitionType
@@ -688,7 +693,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsets.all(
+                                                                EdgeInsets.all(
                                                                     5.0),
                                                             child: Column(
                                                               mainAxisSize:
@@ -724,7 +729,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: InkWell(
@@ -785,7 +790,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsets.all(5.0),
+                                                            EdgeInsets.all(5.0),
                                                         child: Row(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -843,7 +848,7 @@ class _DetalleAutorizarPedidoWidgetState
                             child: Container(
                               width: double.infinity,
                               height: 300.0,
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -853,7 +858,7 @@ class _DetalleAutorizarPedidoWidgetState
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 10.0, 16.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -866,7 +871,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                         .override(
                                                           fontFamily: 'Outfit',
                                                           color:
-                                                              const Color(0xFF14181B),
+                                                              Color(0xFF14181B),
                                                           fontSize: 24.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -878,7 +883,7 @@ class _DetalleAutorizarPedidoWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 16.0),
                                           child: SingleChildScrollView(
                                             child: Column(
@@ -893,7 +898,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     16.0,
@@ -917,7 +922,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -934,7 +939,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -947,7 +952,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -960,7 +965,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -973,7 +978,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -986,7 +991,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1006,7 +1011,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
@@ -1025,7 +1030,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1048,7 +1053,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1065,7 +1070,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1078,7 +1083,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1091,7 +1096,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1104,7 +1109,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1117,7 +1122,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1137,7 +1142,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
@@ -1156,7 +1161,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1180,7 +1185,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1197,7 +1202,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1210,7 +1215,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1223,7 +1228,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1236,7 +1241,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1249,7 +1254,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1269,7 +1274,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
@@ -1288,7 +1293,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1312,7 +1317,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1329,7 +1334,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1342,7 +1347,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1355,7 +1360,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1368,7 +1373,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1381,7 +1386,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1401,7 +1406,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Plus Jakarta Sans',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
@@ -1426,7 +1431,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     16.0,
@@ -1449,7 +1454,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1467,7 +1472,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1480,7 +1485,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1493,7 +1498,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1506,7 +1511,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1519,7 +1524,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1559,7 +1564,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1583,7 +1588,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1602,7 +1607,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1615,7 +1620,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1628,7 +1633,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1641,7 +1646,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1654,7 +1659,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1700,7 +1705,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     16.0,
@@ -1724,7 +1729,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1743,7 +1748,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1756,7 +1761,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1769,7 +1774,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1782,7 +1787,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1795,7 +1800,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1835,7 +1840,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1859,7 +1864,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1878,7 +1883,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -1891,7 +1896,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -1904,7 +1909,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -1917,7 +1922,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1930,7 +1935,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -1970,7 +1975,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     16.0,
@@ -1994,7 +1999,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -2013,7 +2018,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF57636C),
                                                                       fontSize:
                                                                           14.0,
@@ -2026,7 +2031,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             enabledBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFE0E3E7),
                                                                 width: 2.0,
@@ -2039,7 +2044,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFF4B39EF),
                                                                 width: 2.0,
@@ -2052,7 +2057,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             errorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -2065,7 +2070,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                             focusedErrorBorder:
                                                                 OutlineInputBorder(
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Color(
                                                                     0xFFFF5963),
                                                                 width: 2.0,
@@ -2112,7 +2117,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   16.0,
@@ -2152,7 +2157,7 @@ class _DetalleAutorizarPedidoWidgetState
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 10.0, 0.0),
                               child: FutureBuilder<List<DetalledePedidoRow>>(
                                 future: (_model.requestCompleter ??=
@@ -2302,7 +2307,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                 softWrap: true,
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Text(
                                                     'Edición',
@@ -2401,7 +2406,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: FFButtonWidget(
@@ -2457,14 +2462,14 @@ class _DetalleAutorizarPedidoWidgetState
                                                       options: FFButtonOptions(
                                                         height: 40.0,
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     0.0,
                                                                     16.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -2495,7 +2500,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: FFButtonWidget(
@@ -2521,7 +2526,7 @@ class _DetalleAutorizarPedidoWidgetState
                                                                     .primaryText,
                                                               ),
                                                             ),
-                                                            duration: const Duration(
+                                                            duration: Duration(
                                                                 milliseconds:
                                                                     4000),
                                                             backgroundColor:
@@ -2540,14 +2545,14 @@ class _DetalleAutorizarPedidoWidgetState
                                                       options: FFButtonOptions(
                                                         height: 40.0,
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     0.0,
                                                                     16.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,

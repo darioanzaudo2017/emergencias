@@ -1,7 +1,7 @@
-import '/backend/api_requests/api_calls.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'pedido_nuevo_widget.dart' show PedidoNuevoWidget;
 import 'package:flutter/material.dart';
 
@@ -70,10 +70,20 @@ class PedidoNuevoModel extends FlutterFlowModel<PedidoNuevoWidget> {
     return null;
   }
 
-  // Stores action output result for [Backend Call - API (pedirtokencatastro)] action in Button widget.
-  ApiCallResponse? toke;
-  // Stores action output result for [Backend Call - API (direccionCatastro)] action in Button widget.
-  ApiCallResponse? apiResultzg3;
+  // State field(s) for TextCoordenadas widget.
+  FocusNode? textCoordenadasFocusNode;
+  TextEditingController? textCoordenadasTextController;
+  String? Function(BuildContext, String?)?
+      textCoordenadasTextControllerValidator;
+  String? _textCoordenadasTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return 'Es Necesario Cargar las Coordenadas';
+    }
+
+    return null;
+  }
+
   // State field(s) for SwitchDisca widget.
   bool? switchDiscaValue;
   // State field(s) for DropDownProce widget.
@@ -96,6 +106,8 @@ class PedidoNuevoModel extends FlutterFlowModel<PedidoNuevoWidget> {
     textTelefonoTextControllerValidator = _textTelefonoTextControllerValidator;
     textDireccionTextControllerValidator =
         _textDireccionTextControllerValidator;
+    textCoordenadasTextControllerValidator =
+        _textCoordenadasTextControllerValidator;
   }
 
   @override
@@ -111,6 +123,9 @@ class PedidoNuevoModel extends FlutterFlowModel<PedidoNuevoWidget> {
 
     textDireccionFocusNode?.dispose();
     textDireccionTextController?.dispose();
+
+    textCoordenadasFocusNode?.dispose();
+    textCoordenadasTextController?.dispose();
 
     textObsFocusNode?.dispose();
     textObsTextController?.dispose();

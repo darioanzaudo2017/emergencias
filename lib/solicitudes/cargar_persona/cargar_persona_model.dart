@@ -3,6 +3,7 @@ import '/backend/supabase/supabase.dart';
 import '/componentes/menulateralweb/menulateralweb_widget.dart';
 import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'cargar_persona_widget.dart' show CargarPersonaWidget;
 import 'dart:async';
 import 'package:flutter/material.dart';
@@ -47,7 +48,7 @@ class CargarPersonaModel extends FlutterFlowModel<CargarPersonaWidget> {
   }) async {
     final stopwatch = Stopwatch()..start();
     while (true) {
-      await Future.delayed(const Duration(milliseconds: 50));
+      await Future.delayed(Duration(milliseconds: 50));
       final timeElapsed = stopwatch.elapsedMilliseconds;
       final requestComplete = apiRequestCompleter?.isCompleted ?? false;
       if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {

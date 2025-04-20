@@ -10,7 +10,7 @@ class DetalledePedidoTable extends SupabaseTable<DetalledePedidoRow> {
 }
 
 class DetalledePedidoRow extends SupabaseDataRow {
-  DetalledePedidoRow(super.data);
+  DetalledePedidoRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => DetalledePedidoTable();

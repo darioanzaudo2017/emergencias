@@ -2,6 +2,7 @@ import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'cargar_articulos_widget.dart' show CargarArticulosWidget;
 import 'dart:async';
 import 'package:flutter/material.dart';
@@ -68,7 +69,7 @@ class CargarArticulosModel extends FlutterFlowModel<CargarArticulosWidget> {
   }) async {
     final stopwatch = Stopwatch()..start();
     while (true) {
-      await Future.delayed(const Duration(milliseconds: 50));
+      await Future.delayed(Duration(milliseconds: 50));
       final timeElapsed = stopwatch.elapsedMilliseconds;
       final requestComplete = requestCompleter?.isCompleted ?? false;
       if (timeElapsed > maxWait || (requestComplete && timeElapsed > minWait)) {

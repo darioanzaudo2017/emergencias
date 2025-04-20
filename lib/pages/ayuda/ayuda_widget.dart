@@ -8,6 +8,9 @@ export 'ayuda_model.dart';
 class AyudaWidget extends StatefulWidget {
   const AyudaWidget({super.key});
 
+  static String routeName = 'Ayuda';
+  static String routePath = '/ayuda';
+
   @override
   State<AyudaWidget> createState() => _AyudaWidgetState();
 }
@@ -54,7 +57,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -66,7 +69,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
               wrapWithModel(
                 model: _model.menulateralwebModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const MenulateralwebWidget(),
+                child: MenulateralwebWidget(),
               ),
               SingleChildScrollView(
                 child: Column(
@@ -82,7 +85,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 15.0, 0.0, 5.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -101,7 +104,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -138,7 +141,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -146,7 +149,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Text(
                                       '       En la siguiente Pantalla sale un listado de Personas que son las destinatarias de nuestra Solicitud, si la persona que buscamos esta en esta lista, nos debemos asegurar que los datos cargados esten actualizados y luego clickeamos en el botón seleccionar.\n       Si el destinatario de la Solicitud no está en esta Lista, nos situamos en la parte inferior derecha de la Pantalla y clickeamos en el icono con un símbolo ´+´ y nos abrirá una Pantalla donde podemos hacer el registro de la Nueva Persona.\n      ',
@@ -179,7 +182,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -187,7 +190,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Text(
                                       '       A continuación debemos cargar el Detalle del Pedido, en esta Pantalla podemos visualizar los datos de la persona que creó la Solicitud, los datos del Destinatario de la Solicitud y debemos llenar el Formulario con los datos solicitados para poder continuar, este Formulario es importante ya que serán los datos que le entregaremos al encargado del reparto.\n      Una vez que terminamos la carga, clickeamos en el botón \'Cargar Artículos\', donde podremos cargar el Detalle del paquete que se entregará. La solicitud ya fue Creada.',
@@ -220,7 +223,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -228,7 +231,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Text(
                                       '       En la Pantalla de Carga de Artículos sólo debemos agregar los artículos que serán entregados al destinatario de la Solucitud, una vez terminado este proceso de carga clickeamos en \'Guardar Pedido\'. La Solicitud paso al Formulario \'Autorizar Pedidos\' donde el encargado del Área decidirá su continuidad.',
@@ -273,7 +276,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 15.0, 0.0, 5.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -292,7 +295,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -329,7 +332,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -337,7 +340,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Text(
                                       '       En la siguiente Pantalla nos aparecerá el Detalle de la Solicitud, en esta sección en la parte superior Central salen 2 Botones: Autorizado o Rechazado.\n      Si el Pedido es Rechazado este ya no tiene ninguna continuidad y sólo podra ser visualizado desde la sección \'Estado Pedidos\' Rechazados. De lo contrariola Solicitud pasa a la sección \'Asignar Pedidos\' en donde el encargado de esta Área decidirá su continuidad.\n      ',
@@ -382,7 +385,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 15.0, 0.0, 5.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -401,7 +404,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -438,7 +441,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -446,7 +449,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Text(
                                       '      Este es un documento de formato pdf que se puede imprimir o guardar para ser entregado al encargado del reparto. Una vez que el pedido ya fue asignado nuestra solicitud cambia de estado y pasa a Panel de Entregas.\n      ',
@@ -491,7 +494,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 15.0, 0.0, 5.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -510,7 +513,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -547,7 +550,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -555,7 +558,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Text(
                                       '      Una Vez que se cargaron todos los datos solicitados, nuestra solicitud llego a su estado final, solamente va a poder ser consultada en el panel \'Solicitudes\'.\n      ',
@@ -600,7 +603,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 15.0, 0.0, 5.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -619,7 +622,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 15.0, 0.0, 5.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -639,7 +642,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -661,7 +664,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 15.0, 0.0, 5.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -681,7 +684,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -703,7 +706,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 15.0, 0.0, 5.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -723,7 +726,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 10.0, 15.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -745,14 +748,14 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -761,7 +764,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           'Entregado',
@@ -788,7 +791,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -797,7 +800,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           'Asignado',
@@ -814,7 +817,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                         width: 80.0,
                                         height: 80.0,
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFF81F47A),
+                                          color: Color(0xFF81F47A),
                                           borderRadius:
                                               BorderRadius.circular(20.0),
                                         ),
@@ -823,7 +826,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -832,7 +835,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           'No Entregado',
@@ -859,7 +862,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -868,7 +871,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           'P. de Autorización',
@@ -895,7 +898,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -904,7 +907,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           'Para Asignar',
@@ -921,7 +924,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                         width: 80.0,
                                         height: 80.0,
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFF0050FF),
+                                          color: Color(0xFF0050FF),
                                           borderRadius:
                                               BorderRadius.circular(20.0),
                                         ),
@@ -930,7 +933,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -939,7 +942,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 5.0),
                                         child: Text(
                                           'Rechazado',
@@ -956,7 +959,7 @@ class _AyudaWidgetState extends State<AyudaWidget> {
                                         width: 80.0,
                                         height: 80.0,
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFFFF0000),
+                                          color: Color(0xFFFF0000),
                                           borderRadius:
                                               BorderRadius.circular(20.0),
                                         ),

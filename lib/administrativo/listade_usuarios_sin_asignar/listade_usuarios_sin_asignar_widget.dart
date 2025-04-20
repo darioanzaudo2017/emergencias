@@ -2,12 +2,16 @@ import '/backend/supabase/supabase.dart';
 import '/componentes/menulateralweb/menulateralweb_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'listade_usuarios_sin_asignar_model.dart';
 export 'listade_usuarios_sin_asignar_model.dart';
 
 class ListadeUsuariosSinAsignarWidget extends StatefulWidget {
   const ListadeUsuariosSinAsignarWidget({super.key});
+
+  static String routeName = 'ListadeUsuariosSinAsignar';
+  static String routePath = '/listadeUsuariosSinAsignar';
 
   @override
   State<ListadeUsuariosSinAsignarWidget> createState() =>
@@ -83,7 +87,7 @@ class _ListadeUsuariosSinAsignarWidgetState
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -95,13 +99,13 @@ class _ListadeUsuariosSinAsignarWidgetState
                   wrapWithModel(
                     model: _model.menulateralwebModel,
                     updateCallback: () => safeSetState(() {}),
-                    child: const MenulateralwebWidget(),
+                    child: MenulateralwebWidget(),
                   ),
                   Expanded(
                     child: Container(
                       width: double.infinity,
                       height: double.infinity,
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxWidth: 970.0,
                       ),
                       decoration: BoxDecoration(
@@ -111,7 +115,7 @@ class _ListadeUsuariosSinAsignarWidgetState
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 5.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -157,7 +161,7 @@ class _ListadeUsuariosSinAsignarWidgetState
                                         listaUsuariosSinAsignar[
                                             listaUsuariosSinAsignarIndex];
                                     return Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -166,7 +170,7 @@ class _ListadeUsuariosSinAsignarWidgetState
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
                                           context.pushNamed(
-                                            'DetalleRol',
+                                            DetalleRolWidget.routeName,
                                             queryParameters: {
                                               'idUsuario': serializeParam(
                                                 listaUsuariosSinAsignarItem,
@@ -182,7 +186,7 @@ class _ListadeUsuariosSinAsignarWidgetState
                                                 .secondaryBackground,
                                           ),
                                           child: Padding(
-                                            padding: const EdgeInsets.all(12.0),
+                                            padding: EdgeInsets.all(12.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               crossAxisAlignment:

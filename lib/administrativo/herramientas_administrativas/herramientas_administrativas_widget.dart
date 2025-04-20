@@ -2,12 +2,16 @@ import '/componentes/menulateralweb/menulateralweb_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'herramientas_administrativas_model.dart';
 export 'herramientas_administrativas_model.dart';
 
 class HerramientasAdministrativasWidget extends StatefulWidget {
   const HerramientasAdministrativasWidget({super.key});
+
+  static String routeName = 'HerramientasAdministrativas';
+  static String routePath = '/herramientasAdministrativas';
 
   @override
   State<HerramientasAdministrativasWidget> createState() =>
@@ -55,7 +59,7 @@ class _HerramientasAdministrativasWidgetState
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -67,13 +71,13 @@ class _HerramientasAdministrativasWidgetState
               wrapWithModel(
                 model: _model.menulateralwebModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const MenulateralwebWidget(),
+                child: MenulateralwebWidget(),
               ),
               Expanded(
                 child: Container(
                   width: double.infinity,
                   height: double.infinity,
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 970.0,
                   ),
                   decoration: BoxDecoration(
@@ -90,14 +94,14 @@ class _HerramientasAdministrativasWidgetState
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 10.0, 5.0, 5.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
                                     context.pushNamed(
-                                      'ListadeUsuariosSinAsignar',
+                                      ListadeUsuariosSinAsignarWidget.routeName,
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
+                                        kTransitionInfoKey: TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -111,9 +115,9 @@ class _HerramientasAdministrativasWidgetState
                                         MediaQuery.sizeOf(context).width * 0.15,
                                     height: MediaQuery.sizeOf(context).height *
                                         0.15,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -129,14 +133,14 @@ class _HerramientasAdministrativasWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 10.0, 5.0, 5.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
                                     context.pushNamed(
-                                      'ListadeUsuarios',
+                                      ListadeUsuariosWidget.routeName,
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
+                                        kTransitionInfoKey: TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.bottomToTop,
@@ -150,11 +154,11 @@ class _HerramientasAdministrativasWidgetState
                                         MediaQuery.sizeOf(context).width * 0.15,
                                     height: MediaQuery.sizeOf(context).height *
                                         0.15,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0xFFEF9639),
+                                    color: Color(0xFFEF9639),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
@@ -168,14 +172,14 @@ class _HerramientasAdministrativasWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 10.0, 5.0, 5.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
                                     context.pushNamed(
-                                      'Productos',
+                                      ProductosWidget.routeName,
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
+                                        kTransitionInfoKey: TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -190,11 +194,11 @@ class _HerramientasAdministrativasWidgetState
                                         MediaQuery.sizeOf(context).width * 0.15,
                                     height: MediaQuery.sizeOf(context).height *
                                         0.15,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0xFF86EF39),
+                                    color: Color(0xFF86EF39),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
@@ -208,14 +212,14 @@ class _HerramientasAdministrativasWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 10.0, 5.0, 5.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
                                     context.pushNamed(
-                                      'CargarEditarPersona',
+                                      CargarEditarPersonaWidget.routeName,
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
+                                        kTransitionInfoKey: TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -229,11 +233,11 @@ class _HerramientasAdministrativasWidgetState
                                         MediaQuery.sizeOf(context).width * 0.15,
                                     height: MediaQuery.sizeOf(context).height *
                                         0.15,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0xFFE9001A),
+                                    color: Color(0xFFE9001A),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
@@ -253,14 +257,14 @@ class _HerramientasAdministrativasWidgetState
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 10.0, 5.0, 5.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
                                     context.pushNamed(
-                                      'SolicitudesEliminar',
+                                      SolicitudesEliminarWidget.routeName,
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
+                                        kTransitionInfoKey: TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.fade,
@@ -274,11 +278,11 @@ class _HerramientasAdministrativasWidgetState
                                         MediaQuery.sizeOf(context).width * 0.15,
                                     height: MediaQuery.sizeOf(context).height *
                                         0.15,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0xFFF63460),
+                                    color: Color(0xFFF63460),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(

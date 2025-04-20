@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'asignacion_model.dart';
 export 'asignacion_model.dart';
@@ -16,6 +17,9 @@ class AsignacionWidget extends StatefulWidget {
   });
 
   final PedidosRow? idPedido;
+
+  static String routeName = 'Asignacion';
+  static String routePath = '/asignacion';
 
   @override
   State<AsignacionWidget> createState() => _AsignacionWidgetState();
@@ -75,7 +79,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -87,7 +91,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
               wrapWithModel(
                 model: _model.menulateralwebModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const MenulateralwebWidget(),
+                child: MenulateralwebWidget(),
               ),
               Expanded(
                 child: FutureBuilder<List<UsuariosRow>>(
@@ -138,19 +142,19 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                   child: Container(
                                     width: double.infinity,
                                     height: 200.0,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       color: Color(0xFF504AEC),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 24.0, 16.0, 24.0),
                                       child: Container(
                                         width:
                                             MediaQuery.sizeOf(context).width *
                                                 0.9,
                                         decoration: BoxDecoration(
-                                          color: const Color(0xCCFFFFFF),
-                                          boxShadow: const [
+                                          color: Color(0xCCFFFFFF),
+                                          boxShadow: [
                                             BoxShadow(
                                               blurRadius: 8.0,
                                               color: Color(0x36000000),
@@ -164,7 +168,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         child: Padding(
-                                          padding: const EdgeInsets.all(12.0),
+                                          padding: EdgeInsets.all(12.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -174,14 +178,14 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                   Card(
                                                     clipBehavior: Clip
                                                         .antiAliasWithSaveLayer,
-                                                    color: const Color(0xFF504AEC),
+                                                    color: Color(0xFF504AEC),
                                                     shape:
                                                         RoundedRectangleBorder(
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               8.0),
                                                     ),
-                                                    child: const Padding(
+                                                    child: Padding(
                                                       padding:
                                                           EdgeInsets.all(8.0),
                                                       child: Icon(
@@ -193,7 +197,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(8.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Column(
@@ -205,7 +209,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -219,7 +223,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Outfit',
-                                                                  color: const Color(
+                                                                  color: Color(
                                                                       0xFF14181B),
                                                                   fontSize:
                                                                       24.0,
@@ -233,7 +237,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -250,7 +254,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -300,7 +304,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -317,7 +321,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -368,7 +372,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -385,7 +389,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -435,7 +439,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -452,7 +456,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -501,7 +505,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -518,7 +522,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -616,7 +620,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                       return Container(
                                         width: double.infinity,
                                         height: 400.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -626,7 +630,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 16.0,
                                                                 10.0,
@@ -644,7 +648,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 24.0,
                                                                 letterSpacing:
@@ -659,7 +663,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 16.0),
                                                     child:
@@ -678,7 +682,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                             children: [
                                                               Flexible(
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -736,7 +740,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: const EdgeInsetsDirectional
+                                                                    margin: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12.0,
                                                                             0.0,
@@ -757,7 +761,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         10.0,
@@ -776,7 +780,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Outfit',
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xFF14181B),
                                                                         fontSize:
                                                                             24.0,
@@ -791,7 +795,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -808,7 +812,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                 Flexible(
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             0.0,
@@ -837,7 +841,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                 FFButtonWidget(
                                                                   onPressed:
                                                                       () async {
-                                                                    final datePickedDate =
+                                                                    final _datePickedDate =
                                                                         await showDatePicker(
                                                                       context:
                                                                           context,
@@ -883,19 +887,27 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                       },
                                                                     );
 
-                                                                    if (datePickedDate !=
+                                                                    if (_datePickedDate !=
                                                                         null) {
                                                                       safeSetState(
                                                                           () {
                                                                         _model.datePicked =
                                                                             DateTime(
-                                                                          datePickedDate
+                                                                          _datePickedDate
                                                                               .year,
-                                                                          datePickedDate
+                                                                          _datePickedDate
                                                                               .month,
-                                                                          datePickedDate
+                                                                          _datePickedDate
                                                                               .day,
                                                                         );
+                                                                      });
+                                                                    } else if (_model
+                                                                            .datePicked !=
+                                                                        null) {
+                                                                      safeSetState(
+                                                                          () {
+                                                                        _model.datePicked =
+                                                                            getCurrentTimestamp;
                                                                       });
                                                                     }
                                                                   },
@@ -904,14 +916,14 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                       FFButtonOptions(
                                                                     height:
                                                                         40.0,
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
+                                                                        EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -933,7 +945,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -953,7 +965,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 32.0,
                                                                 10.0,
@@ -971,7 +983,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF14181B),
                                                                 fontSize: 24.0,
                                                                 letterSpacing:
@@ -986,7 +998,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 16.0),
                                                     child: Column(
@@ -995,7 +1007,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       10.0,
@@ -1008,7 +1020,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                             children: [
                                                               Flexible(
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -1097,7 +1109,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             12.0,
                                                                             0.0,
                                                                             12.0,
@@ -1120,7 +1132,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       20.0,
@@ -1202,7 +1214,7 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                               FlutterFlowTheme.of(context).primaryText,
                                                                         ),
                                                                       ),
-                                                                      duration: const Duration(
+                                                                      duration: Duration(
                                                                           milliseconds:
                                                                               4000),
                                                                       backgroundColor:
@@ -1212,20 +1224,21 @@ class _AsignacionWidgetState extends State<AsignacionWidget> {
                                                                   );
 
                                                                   context.pushNamed(
-                                                                      'AsignarPedidos');
+                                                                      AsignarPedidosWidget
+                                                                          .routeName);
                                                                 },
                                                                 text:
                                                                     'Actualizar Pedido',
                                                                 options:
                                                                     FFButtonOptions(
                                                                   height: 40.0,
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
-                                                                  iconPadding: const EdgeInsetsDirectional
+                                                                  iconPadding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,

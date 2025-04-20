@@ -9,6 +9,9 @@ export 'auth2_edit_profile_model.dart';
 class Auth2EditProfileWidget extends StatefulWidget {
   const Auth2EditProfileWidget({super.key});
 
+  static String routeName = 'auth_2_EditProfile';
+  static String routePath = '/auth2EditProfile';
+
   @override
   State<Auth2EditProfileWidget> createState() => _Auth2EditProfileWidgetState();
 }
@@ -53,7 +56,7 @@ class _Auth2EditProfileWidgetState extends State<Auth2EditProfileWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -64,13 +67,13 @@ class _Auth2EditProfileWidgetState extends State<Auth2EditProfileWidget> {
             wrapWithModel(
               model: _model.menulateralwebModel,
               updateCallback: () => safeSetState(() {}),
-              child: const MenulateralwebWidget(),
+              child: MenulateralwebWidget(),
             ),
             Expanded(
               child: Container(
                 width: double.infinity,
                 height: MediaQuery.sizeOf(context).height * 0.9,
-                constraints: const BoxConstraints(
+                constraints: BoxConstraints(
                   maxWidth: 970.0,
                 ),
                 decoration: BoxDecoration(

@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'dart:async';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,9 @@ export 'autorizar_pedidos_model.dart';
 
 class AutorizarPedidosWidget extends StatefulWidget {
   const AutorizarPedidosWidget({super.key});
+
+  static String routeName = 'AutorizarPedidos';
+  static String routePath = '/autorizarPedidos';
 
   @override
   State<AutorizarPedidosWidget> createState() => _AutorizarPedidosWidgetState();
@@ -61,7 +65,7 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -75,13 +79,13 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
               wrapWithModel(
                 model: _model.menulateralwebModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const MenulateralwebWidget(),
+                child: MenulateralwebWidget(),
               ),
               Expanded(
                 child: Container(
                   width: 800.0,
                   height: double.infinity,
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 970.0,
                   ),
                   decoration: BoxDecoration(
@@ -92,14 +96,14 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -107,7 +111,7 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x34090F13),
@@ -120,7 +124,7 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
                                     borderRadius: BorderRadius.circular(40.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 0.0, 0.0),
                                     child: TextFormField(
                                       controller: _model
@@ -129,7 +133,7 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
                                           _model.buscadorSolicitudFocusNode,
                                       onChanged: (_) => EasyDebounce.debounce(
                                         '_model.buscadorSolicitudTextController',
-                                        const Duration(milliseconds: 2000),
+                                        Duration(milliseconds: 2000),
                                         () async {
                                           safeSetState(() => _model
                                               .apiRequestCompleter = null);
@@ -151,7 +155,7 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
                                         errorBorder: InputBorder.none,
                                         focusedErrorBorder: InputBorder.none,
                                         contentPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 24.0, 12.0, 12.0, 12.0),
                                         prefixIcon: Icon(
                                           Icons.search_sharp,
@@ -177,7 +181,7 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: EdgeInsets.all(20.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -214,7 +218,7 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
                                   return Container(
                                     width: 600.0,
                                     height: 700.0,
-                                    constraints: const BoxConstraints(
+                                    constraints: BoxConstraints(
                                       maxWidth: 970.0,
                                     ),
                                     decoration: BoxDecoration(
@@ -226,7 +230,7 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 10.0, 0.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -665,7 +669,8 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
 
                                                                       context
                                                                           .pushNamed(
-                                                                        'detalleAutorizarPedido',
+                                                                        DetalleAutorizarPedidoWidget
+                                                                            .routeName,
                                                                         queryParameters:
                                                                             {
                                                                           'idPedido':
@@ -685,12 +690,12 @@ class _AutorizarPedidosWidgetState extends State<AutorizarPedidosWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           40.0,
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
-                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,

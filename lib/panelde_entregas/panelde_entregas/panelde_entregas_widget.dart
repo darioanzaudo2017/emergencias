@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
+import '/index.dart';
 import 'dart:async';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,9 @@ export 'panelde_entregas_model.dart';
 
 class PaneldeEntregasWidget extends StatefulWidget {
   const PaneldeEntregasWidget({super.key});
+
+  static String routeName = 'PaneldeEntregas';
+  static String routePath = '/paneldeEntregas';
 
   @override
   State<PaneldeEntregasWidget> createState() => _PaneldeEntregasWidgetState();
@@ -66,7 +70,7 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -80,13 +84,13 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
               wrapWithModel(
                 model: _model.menulateralwebModel,
                 updateCallback: () => safeSetState(() {}),
-                child: const MenulateralwebWidget(),
+                child: MenulateralwebWidget(),
               ),
               Expanded(
                 child: Container(
                   width: double.infinity,
                   height: double.infinity,
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 970.0,
                   ),
                   decoration: BoxDecoration(
@@ -97,14 +101,14 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
                                 child: Container(
                                   width: double.infinity,
@@ -112,7 +116,7 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: const [
+                                    boxShadow: [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x34090F13),
@@ -125,7 +129,7 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                                     borderRadius: BorderRadius.circular(40.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 0.0, 0.0, 0.0),
                                     child: TextFormField(
                                       controller: _model
@@ -134,7 +138,7 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                                           _model.buscadorSolicitudFocusNode,
                                       onChanged: (_) => EasyDebounce.debounce(
                                         '_model.buscadorSolicitudTextController',
-                                        const Duration(milliseconds: 2000),
+                                        Duration(milliseconds: 2000),
                                         () async {
                                           safeSetState(() => _model
                                               .apiRequestCompleter = null);
@@ -156,7 +160,7 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                                         errorBorder: InputBorder.none,
                                         focusedErrorBorder: InputBorder.none,
                                         contentPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 24.0, 12.0, 12.0, 12.0),
                                         prefixIcon: Icon(
                                           Icons.search_sharp,
@@ -182,7 +186,7 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: EdgeInsets.all(20.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -219,7 +223,7 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                                   return Container(
                                     width: 600.0,
                                     height: 700.0,
-                                    constraints: const BoxConstraints(
+                                    constraints: BoxConstraints(
                                       maxWidth: 970.0,
                                     ),
                                     decoration: BoxDecoration(
@@ -231,7 +235,7 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 10.0, 0.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -673,6 +677,10 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                                                                         ).toString(),
                                                                         getJsonField(
                                                                           listaPedidosSolItem,
+                                                                          r'''$.coordenadas''',
+                                                                        ).toString(),
+                                                                        getJsonField(
+                                                                          listaPedidosSolItem,
                                                                           r'''$.observaciones''',
                                                                         ).toString(),
                                                                         getJsonField(
@@ -702,12 +710,12 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           40.0,
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
-                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -762,7 +770,8 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
 
                                                                       context
                                                                           .pushNamed(
-                                                                        'detallePanelEntrega',
+                                                                        DetallePanelEntregaWidget
+                                                                            .routeName,
                                                                         queryParameters:
                                                                             {
                                                                           'idPedido':
@@ -774,7 +783,7 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                                                                         extra: <String,
                                                                             dynamic>{
                                                                           kTransitionInfoKey:
-                                                                              const TransitionInfo(
+                                                                              TransitionInfo(
                                                                             hasTransition:
                                                                                 true,
                                                                             transitionType:
@@ -792,12 +801,12 @@ class _PaneldeEntregasWidgetState extends State<PaneldeEntregasWidget> {
                                                                         FFButtonOptions(
                                                                       height:
                                                                           40.0,
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
-                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,

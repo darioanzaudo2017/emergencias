@@ -2,6 +2,7 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'menulateralweb_model.dart';
 export 'menulateralweb_model.dart';
@@ -85,14 +86,14 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 16.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 16.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -129,7 +130,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 12.0, 0.0, 0.0),
                             child: Text(
                               'Menu Principal',
@@ -144,7 +145,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -153,9 +154,9 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed(
-                                  'Solicitudes',
+                                  SolicitudesWidget.routeName,
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: const TransitionInfo(
+                                    kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,
                                       transitionType: PageTransitionType.fade,
                                       duration: Duration(milliseconds: 0),
@@ -164,7 +165,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                 );
                               },
                               child: AnimatedContainer(
-                                duration: const Duration(milliseconds: 200),
+                                duration: Duration(milliseconds: 200),
                                 curve: Curves.easeInOut,
                                 width: double.infinity,
                                 height: 44.0,
@@ -175,7 +176,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                   shape: BoxShape.rectangle,
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 0.0, 6.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -187,7 +188,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                         size: 24.0,
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Solicitudes',
@@ -207,7 +208,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -216,9 +217,9 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed(
-                                  'AsignarPedidos',
+                                  AsignarPedidosWidget.routeName,
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: const TransitionInfo(
+                                    kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,
                                       transitionType: PageTransitionType.fade,
                                     ),
@@ -226,7 +227,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                 );
                               },
                               child: AnimatedContainer(
-                                duration: const Duration(milliseconds: 200),
+                                duration: Duration(milliseconds: 200),
                                 curve: Curves.easeInOut,
                                 width: double.infinity,
                                 height: 44.0,
@@ -237,7 +238,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                   shape: BoxShape.rectangle,
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 0.0, 6.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -249,7 +250,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                         size: 24.0,
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Asignar Pedidos',
@@ -269,7 +270,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -278,9 +279,9 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed(
-                                  'PaneldeEntregas',
+                                  PaneldeEntregasWidget.routeName,
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: const TransitionInfo(
+                                    kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,
                                       transitionType:
                                           PageTransitionType.bottomToTop,
@@ -289,7 +290,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                 );
                               },
                               child: AnimatedContainer(
-                                duration: const Duration(milliseconds: 200),
+                                duration: Duration(milliseconds: 200),
                                 curve: Curves.easeInOut,
                                 width: double.infinity,
                                 height: 44.0,
@@ -300,7 +301,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                   shape: BoxShape.rectangle,
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 0.0, 6.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -314,7 +315,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Panel de Entregas',
@@ -335,7 +336,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -344,9 +345,9 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed(
-                                  'EstadoPedidos',
+                                  EstadoPedidosWidget.routeName,
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: const TransitionInfo(
+                                    kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,
                                       transitionType:
                                           PageTransitionType.topToBottom,
@@ -355,7 +356,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                 );
                               },
                               child: AnimatedContainer(
-                                duration: const Duration(milliseconds: 200),
+                                duration: Duration(milliseconds: 200),
                                 curve: Curves.easeInOut,
                                 width: double.infinity,
                                 height: 44.0,
@@ -366,7 +367,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                   shape: BoxShape.rectangle,
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 0.0, 6.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -378,7 +379,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                         size: 24.0,
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Estado de Pedidos',
@@ -399,7 +400,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                           ),
                           if (sideNavUsuariosRow?.rol == 'Administrador')
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -408,9 +409,9 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
                                   context.pushNamed(
-                                    'AutorizarPedidos',
+                                    AutorizarPedidosWidget.routeName,
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
+                                      kTransitionInfoKey: TransitionInfo(
                                         hasTransition: true,
                                         transitionType:
                                             PageTransitionType.scale,
@@ -420,7 +421,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                   );
                                 },
                                 child: AnimatedContainer(
-                                  duration: const Duration(milliseconds: 200),
+                                  duration: Duration(milliseconds: 200),
                                   curve: Curves.easeInOut,
                                   width: double.infinity,
                                   height: 44.0,
@@ -431,7 +432,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                     shape: BoxShape.rectangle,
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 0.0, 6.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -444,7 +445,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Autorizar Pedidos',
@@ -465,7 +466,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                             ),
                           if (sideNavUsuariosRow?.rol == 'Administrador')
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -474,9 +475,9 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
                                   context.pushNamed(
-                                    'HistorialPedidos',
+                                    HistorialPedidosWidget.routeName,
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
+                                      kTransitionInfoKey: TransitionInfo(
                                         hasTransition: true,
                                         transitionType:
                                             PageTransitionType.topToBottom,
@@ -485,7 +486,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                   );
                                 },
                                 child: AnimatedContainer(
-                                  duration: const Duration(milliseconds: 200),
+                                  duration: Duration(milliseconds: 200),
                                   curve: Curves.easeInOut,
                                   width: double.infinity,
                                   height: 44.0,
@@ -496,7 +497,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                     shape: BoxShape.rectangle,
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 0.0, 6.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -509,7 +510,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Historial Pedidos',
@@ -529,7 +530,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                               ),
                             ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Herramientas',
@@ -542,7 +543,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -551,9 +552,9 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed(
-                                  'auth_2_EditProfile',
+                                  Auth2EditProfileWidget.routeName,
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: const TransitionInfo(
+                                    kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,
                                       transitionType: PageTransitionType.fade,
                                       duration: Duration(milliseconds: 0),
@@ -562,7 +563,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                 );
                               },
                               child: AnimatedContainer(
-                                duration: const Duration(milliseconds: 200),
+                                duration: Duration(milliseconds: 200),
                                 curve: Curves.easeInOut,
                                 width: double.infinity,
                                 height: 44.0,
@@ -573,7 +574,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                   shape: BoxShape.rectangle,
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 0.0, 6.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -585,7 +586,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                         size: 24.0,
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Perfil',
@@ -605,7 +606,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -614,9 +615,9 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed(
-                                  'Ayuda',
+                                  AyudaWidget.routeName,
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: const TransitionInfo(
+                                    kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,
                                       transitionType: PageTransitionType.fade,
                                       duration: Duration(milliseconds: 0),
@@ -625,7 +626,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                 );
                               },
                               child: AnimatedContainer(
-                                duration: const Duration(milliseconds: 200),
+                                duration: Duration(milliseconds: 200),
                                 curve: Curves.easeInOut,
                                 width: double.infinity,
                                 height: 44.0,
@@ -636,7 +637,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                   shape: BoxShape.rectangle,
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 0.0, 6.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -648,7 +649,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                         size: 24.0,
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Ayuda',
@@ -669,7 +670,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                           ),
                           if (sideNavUsuariosRow?.rol == 'Administrador')
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -678,9 +679,9 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
                                   context.pushNamed(
-                                    'HerramientasAdministrativas',
+                                    HerramientasAdministrativasWidget.routeName,
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
+                                      kTransitionInfoKey: TransitionInfo(
                                         hasTransition: true,
                                         transitionType: PageTransitionType.fade,
                                       ),
@@ -688,7 +689,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                   );
                                 },
                                 child: AnimatedContainer(
-                                  duration: const Duration(milliseconds: 200),
+                                  duration: Duration(milliseconds: 200),
                                   curve: Curves.easeInOut,
                                   width: double.infinity,
                                   height: 44.0,
@@ -699,7 +700,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                     shape: BoxShape.rectangle,
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         8.0, 0.0, 6.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -712,7 +713,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             'Administrativo',
@@ -734,7 +735,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                 ),
                               ),
                             ),
-                        ].divide(const SizedBox(height: 12.0)),
+                        ].divide(SizedBox(height: 12.0)),
                       ),
                     ),
                   Divider(
@@ -744,13 +745,13 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 12.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 12.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Expanded(
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -821,7 +822,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                           ),
                                     ),
                                     Text(
-                                      '07/02/2025',
+                                      '19/04/2025',
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -833,7 +834,7 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                   ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -851,7 +852,8 @@ class _MenulateralwebWidgetState extends State<MenulateralwebWidget> {
                                               .clearRedirectLocation();
 
                                           context.goNamedAuth(
-                                              'auth_2_Login', context.mounted);
+                                              Auth2LoginWidget.routeName,
+                                              context.mounted);
                                         },
                                         child: Text(
                                           'Salir',

@@ -37,6 +37,7 @@ Future pdfmemo(
   int? id,
   String? barrio,
   String? direccion,
+  String? coordenadas,
   String? observaciones,
   String? telefono,
   String? nombreCompleto,
@@ -85,6 +86,7 @@ Future pdfmemo(
 Memo Nº: ${id ?? 'No especificado'}
 Barrio Nº: ${barrio ?? 'No especificado'}
 Dirección: ${direccion ?? 'No especificada'}
+Coordenadas: ${coordenadas ?? 'No especificada'}
 Observaciones: ${observaciones ?? 'No hay observaciones'}
 Nombre completo: ${nombreCompleto ?? 'No especificado'}
 DNI: ${dni ?? 'No especificado'}
